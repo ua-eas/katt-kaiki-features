@@ -83,51 +83,55 @@ Feature: proposal creation and submission
       And I select the "Questions" tab at the top of the document
       And I show the "Does the Proposed Work Include any of the Following?" tab
       And I answer the questions under "Does the Proposed Work Include any of the Following?" with:
-        |  1 |  No |
-        |  2 | Yes |
-        |  3 |  No |
-        |  4 |  No |
-        |  5 |  No |
-        |  6 |  No |
-        |  7 |  No |
-        |  8 |  No |
-        |  9 |  No |
-        | 10 |  No |
-        | 11 | Yes |
-        | 12 |  No |
-        | 13 |  No |
-        | 14 |  No |
-        | 15 |  No |
-        | 16 |  No |
-        | 17 |  No |
+        |  # | Answer |
+        |  1 |     No |
+        |  2 |    Yes |
+        |  3 |     No |
+        |  4 |     No |
+        |  5 |     No |
+        |  6 |     No |
+        |  7 |     No |
+        |  8 |     No |
+        |  9 |     No |
+        | 10 |     No |
+        | 11 |    Yes |
+        | 12 |     No |
+        | 13 |     No |
+        | 14 |     No |
+        | 15 |     No |
+        | 16 |     No |
+        | 17 |     No |
       And I hide the "Does the Proposed Work Include any of the Following?" tab
       And I show the "F&A (Indirect Cost) Questions" tab
       And I answer the questions under "F&A (Indirect Cost) Questions" with:
-        |  1 | No |
-        |  2 | No |
-        |  3 | No |
+        |  # | Answer |
+        |  1 |     No |
+        |  2 |     No |
+        |  3 |     No |
       And I hide the "F&A (Indirect Cost) Questions" tab
       And I show the "Grants.gov Questions" tab
       And I answer the questions under "Grants.gov Questions" with:
-        |  1 |  No | 
-        |  2 |  No | 
-        |  3 |  No | 
-        |  4 |  No | 
-        |  5 |  No | 
-        |  6 | N/A | 
-        |  7 |  No | 
-        |  8 |  No | 
-        |  9 |  No | 
-        | 10 |  No | 
-        | 11 | N/A | 
-        | 12 |  No | 
-        | 13 |  No | 
+        |  # | Answer |
+        |  1 |     No | 
+        |  2 |     No | 
+        |  3 |     No | 
+        |  4 |     No | 
+        |  5 |     No | 
+        |  6 |    N/A | 
+        |  7 |     No | 
+        |  8 |     No | 
+        |  9 |     No | 
+        | 10 |     No | 
+        | 11 |    N/A | 
+        | 12 |     No | 
+        | 13 |     No | 
       And I hide the "Grants.gov Questions" tab
       And I show the "PRS Questions" tab
       And I answer the questions under "PRS Questions" with:
-        |  1 |  No | 
-        |  2 |  No | 
-        |  3 |  No | 
+        |  # | Answer |
+        |  1 |     No | 
+        |  2 |     No | 
+        |  3 |     No | 
       And I hide the "PRS Questions" tab
       And I click the "Save" button
     Then I should see the message "Document was successfully saved."
