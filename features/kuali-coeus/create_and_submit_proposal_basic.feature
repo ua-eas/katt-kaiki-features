@@ -28,7 +28,7 @@ Feature: proposal creation and submission
     Then I should see "National Institute on Aging" under under the sponsor code
     When I set the "Project Start Date" to "02/01/2014"
       And I set the "Project End Date" to "01/31/2019"
-      And I click "Show" on the "Sponsor & Program Information" tab
+      And I show the "Sponsor & Program Information" tab
       And I set "Sponsor Deadline Date" to "10/01/2013"
       And I set "NSF Science Code" to "F.03 Medical - Life Sciences"
       And I click the "Save" button
@@ -85,8 +85,8 @@ Feature: proposal creation and submission
       And I answer the questions under "Does the Proposed Work Include any of the Following?" with:
         |  # | Answer |
         |  1 |     No |
-        |  2 |    Yes |
-        |  3 |     No |
+        |  2 |     No |
+        |  3 |    Yes |
         |  4 |     No |
         |  5 |     No |
         |  6 |     No |
@@ -94,13 +94,14 @@ Feature: proposal creation and submission
         |  8 |     No |
         |  9 |     No |
         | 10 |     No |
-        | 11 |    Yes |
-        | 12 |     No |
+        | 11 |     No |
+        | 12 |    Yes |
         | 13 |     No |
         | 14 |     No |
         | 15 |     No |
         | 16 |     No |
         | 17 |     No |
+        | 18 |     No |
       And I hide the "Does the Proposed Work Include any of the Following?" tab
       And I show the "F&A (Indirect Cost) Questions" tab
       And I answer the questions under "F&A (Indirect Cost) Questions" with:
@@ -177,7 +178,7 @@ Feature: proposal creation and submission
         | F&A Cost           | 34,000.00  |
       And I should see Budget Totals calculated as:
         | Period Start Date  | 02/01/2014 |
-        | Period End Date    | 02/01/2014 |
+        | Period End Date    | 01/31/2019 |
         | Total Sponsor Cost | 500,000.00 |
         | Direct Cost        | 330,000.00 |
         | F&A Cost           | 170,000.00 |
