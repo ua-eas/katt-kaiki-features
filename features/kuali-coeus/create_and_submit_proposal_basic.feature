@@ -101,6 +101,7 @@ Feature: proposal creation and submission
         | 15 |     No |
         | 16 |     No |
         | 17 |     No |
+        | 18 |     No |
       And I hide the "Does the Proposed Work Include any of the Following?" tab
       And I show the "F&A (Indirect Cost) Questions" tab
       And I answer the questions under "F&A (Indirect Cost) Questions" with:
@@ -177,7 +178,7 @@ Feature: proposal creation and submission
         | F&A Cost           | 34,000.00  |
       And I should see Budget Totals calculated as:
         | Period Start Date  | 02/01/2014 |
-        | Period End Date    | 02/01/2014 |
+        | Period End Date    | 01/31/2019 |
         | Total Sponsor Cost | 500,000.00 |
         | Direct Cost        | 330,000.00 |
         | F&A Cost           | 170,000.00 |
