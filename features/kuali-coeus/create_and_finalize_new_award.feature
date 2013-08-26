@@ -90,12 +90,12 @@ When I click "Show" on the "Direct/F&A Funds Distribution" tab
     |  5     | 66000       | 34000    | 
   And I click "Recalculate"
 Then I should see the "Budget Periods" table filled out with:
-    |  #     | Total Sponsor Cost | Direct Cost | F&A Cost  | 
-    |  1     | 100,000.00         | 66,000.00   | 34,000.00 |
-    |  2     | 100,000.00         | 66,000.00   | 34,000.00 |
-    |  3     | 100,000.00         | 66,000.00   | 34,000.00 |
-    |  4     | 100,000.00         | 66,000.00   | 34,000.00 |
-    |  5     | 100,000.00         | 66,000.00   | 34,000.00 |
+    |  #     | Direct Cost | F&A Cost  | 
+    |  1     | 66,000.00   | 34,000.00 |
+    |  2     | 66,000.00   | 34,000.00 |
+    |  3     | 66,000.00   | 34,000.00 |
+    |  4     | 66,000.00   | 34,000.00 |
+    |  5     | 66,000.00   | 34,000.00 |
   And I should see "Total" calculated as:
       |Direct Cost 			| $330,000.00 |
       |F&A Cost   			| $170,000.00 |
