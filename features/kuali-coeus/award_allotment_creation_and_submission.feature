@@ -3,7 +3,7 @@ Feature: Award allotment (increment) creation and submission
 
   As a Central Administrator
   I want to be able to add incremental funding to an existing award based on an institutional proposal
-  
+  so that I can reflect the increase in obligated amount
 
   Background:
     Given I am up top
