@@ -6,8 +6,8 @@ Feature: proposal creation and submission
     Credit Split = One Dept, Human Subjects, 
     Predominately 'No' Questions, 
     Direct/Indirect Budget, 5 Budget Periods,
-    No Unrecovered F&A, No Cost Share, No Project
-    Incoming, No Validation Warnings
+    No Unrecovered F&A, No Cost Share, No Program
+    Income, No Validation Warnings
   So that  the proposal moves through the workflow and ends in an "Approved and Submitted" status.
 
   Background:
