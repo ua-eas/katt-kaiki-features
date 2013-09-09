@@ -1,3 +1,5 @@
+@test1
+
 Feature: proposal creation and submission
 
 
@@ -7,14 +9,13 @@ Feature: proposal creation and submission
     Credit Split = One Dept, Human Subjects, 
     Predominately 'No' Questions, 
     Direct/Indirect Budget, 5 Budget Periods,
-    No Unrecovered F&A, No Cost Share, No Program
-    Income, No Validation Warnings
+    No Unrecovered F&A, No Cost Share, No Project
+    Incoming, No Validation Warnings
   So that  the proposal moves through the workflow and ends in an "Approved and Submitted" status.
 
 
   Background:
     Given I am up top
-
 
   Scenario: create and submit basic proposal
 
@@ -41,24 +42,24 @@ Feature: proposal creation and submission
 
 
   When I am on the "Key Personnel" document tab
-    And I click the "Employee Search Lookup" button
+    And I start a lookup for "Employee"
     And I set "Last Name" to "Garland"
     And I click the "Search" button
     And I return the record with "KcPerson Id" of "112707439853" 
     And I set the "Proposal Role" to "PI/Contact"
     And I click the "Add Person" button
-    And I click the "Employee Search Lookup" button
+    And I start a lookup for "Employee"
     And I set "Last Name" to "Baker"
     And I click the "Search" button
     And I return the record with "KcPerson Id" of "108464956880"
     And I set "Proposal Role" to "Co-Investigator"
     And I click the "Add Person" button
     And I click "Show" on the "Linda L Garland" tab
-    And I click "Show" on the "Person Details" section
+    And I click "Show" on the "Person Details" section under "Linda L Garland"
     And I set "Percentage Effort" for "Linda L Garland" as "5"
     And I click "Hide" on the "Linda L Garland" tab
     And I click "Show" on the "Amanda F Baker" tab
-    And I click "Show" on the "Person Details" section
+    And I click "Show" on the "Person Details" section under "Amanda F Baker"
     And I set "Percentage Effort" for "Amanda F Baker" as "20"
     And I click "Hide" on the "Amanda F Baker" tab
     And I fill out the Combined Credit Split for "Linda L Garland" with the following:
@@ -80,7 +81,7 @@ Feature: proposal creation and submission
   When I am on the "Special Review" document tab
     And I set the "Type" to "Human Subjects"
     And I set the "Approval Status" to "Approved"
-    And I click the "Add" button on the "Special Review" tab
+    And I click "Add" on "Special Review"
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
@@ -152,7 +153,7 @@ Feature: proposal creation and submission
 
   When I am on the "Budget Versions" document tab
     And I set the "Name" to "Final Budget"
-    And I click the "Add" button on the "Budget Versions" tab
+    And I click "Add" on "Budget Versions"
     And I click "Open" on "Final Budget"
     
     
