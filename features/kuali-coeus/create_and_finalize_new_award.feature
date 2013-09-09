@@ -1,3 +1,5 @@
+@test2
+
 Feature: Award creation and submission
 
   As a Central Administrator
@@ -12,7 +14,6 @@ Feature: Award creation and submission
   Background:
     Given I am up top
 
-  @test2
   Scenario: Create and finalize new award
 
 
