@@ -1,3 +1,5 @@
+@test1
+
 Feature: proposal creation and submission
 
 
@@ -15,7 +17,6 @@ Feature: proposal creation and submission
   Background:
     Given I am up top
 
-  @test1
   Scenario: create and submit basic proposal
 
 
