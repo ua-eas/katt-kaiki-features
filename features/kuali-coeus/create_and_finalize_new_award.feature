@@ -1,5 +1,4 @@
 @test2
-
 Feature: Award creation and submission
 
   As a Central Administrator
@@ -13,6 +12,7 @@ Feature: Award creation and submission
 
   Background:
     Given I am up top
+
 
   Scenario: Create and finalize new award
 
@@ -51,7 +51,7 @@ Feature: Award creation and submission
     And I should see "F.03: Medical - Life Sciences" in NSF Science Code
   When I set "Transaction Type" to "New"
     And I set the "Notice Date" to "01/01/2014"
-    And I set the "Comments" to something like "New award: Ant/Obl $500,000.00 02/01/2014-01/31/2019"
+    And I set the "Comments" text area to "New award: Ant/Obl $500,000.00 02/01/2014-01/31/2019"
     And I set the "Award Status" to "Active"
     And I set the "Account ID" to "3001500"
     And I set the "Award Type" to "Grant"

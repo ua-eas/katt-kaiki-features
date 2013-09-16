@@ -1,5 +1,4 @@
 @test1
-
 Feature: proposal creation and submission
 
 
@@ -17,6 +16,7 @@ Feature: proposal creation and submission
   Background:
     Given I am up top
 
+
   Scenario: create and submit basic proposal
 
 
@@ -28,7 +28,7 @@ Feature: proposal creation and submission
 	  And I set the "Proposal Type" to "New"
 	  And I set the "Lead Unit" to "0721"
 	  And I set the "Activity Type" to "Research"
-	  And I set the "Project Title" to something like "Test scenario: create and submit basic proposal"
+	  And I set the "Project Title" text area to "Test scenario: create and submit basic proposal"
 	  And I set the "Sponsor Code" to "010803"
 	Then I should see "National Institute on Aging" under the sponsor code
 	When I set the "Project Start Date" to "02/01/2014"
@@ -56,11 +56,11 @@ Feature: proposal creation and submission
     And I click the "Add Person" button
     And I click "Show" on the "Linda L Garland" tab
     And I click "Show" on the "Person Details" section under "Linda L Garland"
-    And I set "Percentage Effort" for "Linda L Garland" as "5"
+    And I set "Percentage Effort" under "Linda L Garland" as "5"
     And I click "Hide" on the "Linda L Garland" tab
     And I click "Show" on the "Amanda F Baker" tab
     And I click "Show" on the "Person Details" section under "Amanda F Baker"
-    And I set "Percentage Effort" for "Amanda F Baker" as "20"
+    And I set "Percentage Effort" under "Amanda F Baker" as "20"
     And I click "Hide" on the "Amanda F Baker" tab
     And I fill out the Combined Credit Split for "Linda L Garland" with the following:
       | Credit for Award | 25 |
