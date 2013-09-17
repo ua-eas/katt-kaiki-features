@@ -1,4 +1,5 @@
-@test2
+@kc2
+
 Feature: Award creation and submission
 
   As a Central Administrator
@@ -12,7 +13,6 @@ Feature: Award creation and submission
 
   Background:
     Given I am up top
-
 
   Scenario: Create and finalize new award
 
@@ -116,8 +116,8 @@ Feature: Award creation and submission
     And I wait for the document to finish being processed
   Then I should see "Document ID:Status" set to ":FINAL" in the document header
   When I click the "Return to Award" button
-  
-  
+
+
     And I am on the "Contacts" document tab
     And I click "Show" on the "Key Personnel and Credit Split" tab
   Then I should see the "Key Personnel" table filled out with:
@@ -156,13 +156,14 @@ Feature: Award creation and submission
     And I should see "Project Role" as "Other"
   When I click the "Save" button
     Then I should see the message "Document was successfully saved."
- 
- 
+
+
   When I am on the "Commitments" document tab
     And I click "Show" on the "Rates" tab
     And I set the "Rate" to "51.50"
     And I set the "Type" to "MTDC"
     And I set the "Fiscal Year" to "2014"
+  When I slow down
   Then I should see "Start Date" as "07/01/2013"
     And I should see "End Date" as "06/30/2014"
     And I should see "Campus" as "on"
@@ -173,11 +174,12 @@ Feature: Award creation and submission
   Then I should see "Start Date" as "07/01/2014"
     And I should see "End Date" as "06/30/2015"
     And I should see "Campus" as "on"
+  When I am fast
   When I click "Add" button
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
-   
-   
+
+
   When I am on the "Special Review" document tab
   Then I should see the "Special Review" table filled out with:
     | line | Type           | Approval Status |

@@ -1,4 +1,4 @@
-@test3
+@kc3
 Feature: Continuation proposal creation and submission
 
   As a Central Administrator
@@ -57,7 +57,7 @@ Feature: Continuation proposal creation and submission
     And I start a lookup for "Employee"
     And I set "Last Name" to "Garland"
     And I click the "Search" button
-    And I return the record with "KcPerson Id" of "112707439853" 
+    And I return the record with "KcPerson Id" of "112707439853"
     And I set the "Proposal Role" to "PI/Contact"
     And I click the "Add Person" button
     And I start a lookup for "Employee"
@@ -88,8 +88,8 @@ Feature: Continuation proposal creation and submission
       | F&A Revenue      | 100 |
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
-  
-  
+
+
   When I am on the "Special Review" document tab
     And I set the "Type" to "Human Subjects"
     And I set the "Approval Status" to "Pending"
@@ -97,15 +97,15 @@ Feature: Continuation proposal creation and submission
     And I click "Add" on "Special Review"
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
-  
-  
+
+
   When I am on the "Custom Data" document tab
     And I click "Show" on the "Project Information" tab
     And I set "Prj Location" to "0211-0124-"
     And I set "F&A Rate" to "51.500"
-    And I click the "Save" button 
-  
-  
+    And I click the "Save" button
+
+
   When I am on the "Questions" document tab
     And I click "Show" on the "Does the Proposed Work Include any of the Following?" tab
     And I answer the questions under "Does the Proposed Work Include any of the Following?" with:
@@ -139,41 +139,41 @@ Feature: Continuation proposal creation and submission
     And I click "Show" on the "Grants.gov Questions" tab
     And I answer the questions under "Grants.gov Questions" with:
             | #      | Answer |
-            |  1     | No     | 
-            |  2     | No     | 
-            |  3     | No     | 
-            |  4     | No     | 
-            |  5     | No     | 
-            |  6     | N/A    | 
-            |  7     | No     | 
-            |  8     | No     | 
-            |  9     | No     | 
-            | 10     | No     | 
-            | 11     | N/A    | 
-            | 12     | No     | 
+            |  1     | No     |
+            |  2     | No     |
+            |  3     | No     |
+            |  4     | No     |
+            |  5     | No     |
+            |  6     | N/A    |
+            |  7     | No     |
+            |  8     | No     |
+            |  9     | No     |
+            | 10     | No     |
+            | 11     | N/A    |
+            | 12     | No     |
             | 13     | No     |
     And I click "Hide" on the "Grants.gov Questions" tab
     And I click "Show" on the "PRS Questions" tab
     And I answer the questions under "PRS Questions" with:
             | #      | Answer |
-            |  1     | No     | 
-            |  2     | No     | 
-            |  3     | No     | 
+            |  1     | No     |
+            |  2     | No     |
+            |  3     | No     |
     And I click "Hide" on the "PRS Questions" tab
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
-  
-  
+
+
   When I am on the "Budget Versions" document tab
     And I set the "Name" to "Final Budget"
     And I click "Add" on "Budget Versions"
     And I click "Open" on "Final Budget"
-    And I fill out the "Budget Periods" table with:          
-            | #      | Direct Cost | F&A Cost | 
-            |  1     | 66000       | 34000    | 
+    And I fill out the "Budget Periods" table with:
+            | #      | Direct Cost | F&A Cost |
+            |  1     | 66000       | 34000    |
     And I click the "Recalculate" button
   Then I should see the "Budget Periods" table filled out with:
-            |  #     | Total Sponsor Cost | Direct Cost | F&A Cost  | 
+            |  #     | Total Sponsor Cost | Direct Cost | F&A Cost  |
             |  1     | 100,000.00         | 66,000.00   | 34,000.00 |
     And I should see Budget Totals calculated as:
             | Period Start Date  | 02/01/2015 |
@@ -188,8 +188,8 @@ Feature: Continuation proposal creation and submission
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
   When I click the "Return to Proposal" button
-  
-  
+
+
     And I am on the "Proposal Actions" document tab
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
@@ -208,8 +208,8 @@ Feature: Continuation proposal creation and submission
     And I click the "Continue" button
   Then I should see "Status" set to "Approved and Submitted" in the document header
     And I should see a message starting with "Institutional Proposal" and ending with "has been generated"
-  
-  
+
+
   When I am on the "Medusa" document tab
   Then I should see "Institutional Proposal" link
     And I should see "Development Proposal" link
@@ -221,50 +221,50 @@ Feature: Continuation proposal creation and submission
     And I should see "End Date" set to "01/31/2016"
     And I should see "Award" link
   When I click the "Open Proposal" button
-  
-  
+
+
   Then a new browser window appears
-  
-  
+
+
   When I am on the "Proposal" document tab
   Then I should see the message "Document was successfully reloaded."
-  
-  
+
+
   When I am on the "Grants.gov" document tab
   Then I should see the message "Document was successfully reloaded."
-  
-  
+
+
   When I am on the "Key Personnel" document tab
   Then I should see the message "Document was successfully reloaded."
-  
-  
+
+
   When I am on the "Special Review" document tab
   Then I should see the message "Document was successfully reloaded."
-  
-  
+
+
   When I am on the "Custom Data" document tab
   Then I should see the message "Document was successfully reloaded."
-  
-  
+
+
   When I am on the "Abstracts and Attachments" document tab
   Then I should see the message "Document was successfully reloaded."
-  
-  
+
+
   When I am on the "Questions" document tab
   Then I should see the message "Document was successfully reloaded."
-  
-  
+
+
   When I am on the "Budget Versions" document tab
   Then I should see the message "Document was successfully reloaded."
-  
-  
+
+
   When I am on the "Permissions" document tab
   Then I should see the message "Document was successfully reloaded."
-  
-  
+
+
   When I am on the "Proposal Actions" document tab
   Then I should see the message "Document was successfully reloaded."
-  
-  
+
+
   When I am on the "Medusa" document tab
   Then I should see the message "Document was successfully reloaded."
