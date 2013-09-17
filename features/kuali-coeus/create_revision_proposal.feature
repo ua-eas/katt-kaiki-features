@@ -1,3 +1,4 @@
+@kc6
 Feature: Revision proposal creation and submission
 
 As a Central Administrator
