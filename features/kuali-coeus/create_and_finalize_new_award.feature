@@ -1,5 +1,4 @@
-@kc2
-
+@Award_New
 Feature: Award creation and submission
 
   As a Central Administrator
