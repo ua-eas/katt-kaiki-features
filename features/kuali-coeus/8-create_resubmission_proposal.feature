@@ -1,4 +1,4 @@
-@kc8
+@Proposal_Resubmission
 Feature: Resubmission proposal creation and submission
 
 
