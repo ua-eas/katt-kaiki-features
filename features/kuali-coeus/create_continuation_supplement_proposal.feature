@@ -1,4 +1,4 @@
-@kc5
+@Proposal_Revision
 Feature: Award supplement/continuation creation and submission
 
 
