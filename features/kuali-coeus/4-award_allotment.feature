@@ -1,4 +1,4 @@
-@kc4
+@Award_Allotment
 Feature: Award allotment (increment) creation and submission
 
 
