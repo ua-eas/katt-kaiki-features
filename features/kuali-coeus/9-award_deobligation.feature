@@ -18,7 +18,7 @@ Feature: Award deobligation
      And I set "Award Status" to "Active"
      And I set "Award Title" to "Test scenario: create and submit basic proposal"
      And I click the "Search" button
-     And I sort by Award ID
+     And I click Award ID
   Then I should see one or more items retrieved
   When I "open" the first record
      And I click the "Edit" button at the bottom of the page
