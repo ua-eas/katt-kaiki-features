@@ -1,4 +1,4 @@
-@kc10
+@Proposal_Admin_Change
 Feature: Administrative change proposal creation and submission
 
   As a Central Administrator
