@@ -1,4 +1,4 @@
-@Proposal_New
+@Award_Allotment
 Feature: Award allotment (increment) creation and submission
 
 
