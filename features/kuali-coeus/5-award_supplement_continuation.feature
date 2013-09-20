@@ -20,7 +20,7 @@ Feature: Award supplement/continuation creation and submission
     And I set "Award Title" to "Test scenario:*"
     And I click the "Search" button
   Then I should see one or more items retrieved
-  When I sort by Award ID
+  When I click Award ID
   When I "open" the first record
     And I click the "Edit" button at the bottom of the page
   Then I should see "Description" set to "Garland, NIA, 3001500"
