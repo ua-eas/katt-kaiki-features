@@ -1,4 +1,4 @@
-@kc6
+@Award_Supplement_Continuation
 Feature: Revision proposal creation and submission
 
   As a Central Administrator
