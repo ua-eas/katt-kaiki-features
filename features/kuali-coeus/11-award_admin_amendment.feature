@@ -1,4 +1,4 @@
-@kc11
+@Award_Admin_Amendment
 Feature: Award administrative amendment
 
 
