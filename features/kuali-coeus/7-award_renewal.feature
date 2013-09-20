@@ -1,4 +1,4 @@
-@kc7
+@Proposal_Renewal
 Feature: Renewal proposal creation and submission
 
   As a Central Administrator
