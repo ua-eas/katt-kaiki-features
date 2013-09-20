@@ -1,4 +1,4 @@
-@kc3
+@Proposal_Continuation
 Feature: Continuation proposal creation and submission
 
 
