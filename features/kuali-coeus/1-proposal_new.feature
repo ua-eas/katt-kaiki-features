@@ -1,4 +1,4 @@
-@kc1
+@Proposal_New
 Feature: proposal creation and submission
 
 
