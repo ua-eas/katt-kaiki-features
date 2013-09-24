@@ -1,4 +1,4 @@
-@Proposal_Revision
+@Award_Supplement_Continuation
 Feature: Award supplement/continuation creation and submission
 
 
