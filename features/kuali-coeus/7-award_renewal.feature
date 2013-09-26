@@ -215,8 +215,9 @@ Feature: Renewal proposal creation and submission
   Then I should see "Status" set to "Approved and Submitted" in the document header
     And I should see a message starting with "Institutional Proposal" and ending with "has been generated"
 
-
+  
   When I am on the "Grants.gov" document tab
+  When I am slow
     And I click "Show" on the "Submission Details" tab
     And I click the "Refresh" button
   Then I should see Received Date not null
@@ -224,3 +225,4 @@ Feature: Renewal proposal creation and submission
     And I should see "GG Tracking Id" set to something like "GRANT00"
     And I should see "Comments" set to "VALIDATED"
     And I should see Last Modified Date not null
+   
