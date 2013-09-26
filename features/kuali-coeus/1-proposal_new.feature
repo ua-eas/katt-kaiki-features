@@ -1,13 +1,12 @@
-@test1
-
+@Proposal_New
 Feature: proposal creation and submission
 
 
   As a Central Administrator
   I want to be able to create and submit a basic proposal with the following attributes:
-    Federal Sponsor, No Prime, PI/Co-I, 
-    Credit Split = One Dept, Human Subjects, 
-    Predominately 'No' Questions, 
+    Federal Sponsor, No Prime, PI/Co-I,
+    Credit Split = One Dept, Human Subjects,
+    Predominately 'No' Questions,
     Direct/Indirect Budget, 5 Budget Periods,
     No Unrecovered F&A, No Cost Share, No Project
     Incoming, No Validation Warnings
@@ -28,7 +27,7 @@ Feature: proposal creation and submission
 	  And I set the "Proposal Type" to "New"
 	  And I set the "Lead Unit" to "0721"
 	  And I set the "Activity Type" to "Research"
-	  And I set the "Project Title" to something like "Test scenario: create and submit basic proposal"
+	  And I set the "Project Title" text area to "Test scenario: create and submit basic proposal"
 	  And I set the "Sponsor Code" to "010803"
 	Then I should see "National Institute on Aging" under the sponsor code
 	When I set the "Project Start Date" to "02/01/2014"
@@ -36,16 +35,16 @@ Feature: proposal creation and submission
 	  And I click "Show" on the "Sponsor & Program Information" tab
 	  And I set "Sponsor Deadline Date" to "10/01/2013"
     And I set "NSF Science Code" to "F.03: Medical - Life Sciences"
-    And I click the "Save" button  
+    And I click the "Save" button
 	Then I should see the message "Document was successfully saved."
-    And I should see "Sponsor Name" set to "National Institute on Aging" in the document header 
+    And I should see "Sponsor Name" set to "National Institute on Aging" in the document header
 
 
   When I am on the "Key Personnel" document tab
     And I start a lookup for "Employee"
     And I set "Last Name" to "Garland"
     And I click the "Search" button
-    And I return the record with "KcPerson Id" of "112707439853" 
+    And I return the record with "KcPerson Id" of "112707439853"
     And I set the "Proposal Role" to "PI/Contact"
     And I click the "Add Person" button
     And I start a lookup for "Employee"
@@ -56,11 +55,11 @@ Feature: proposal creation and submission
     And I click the "Add Person" button
     And I click "Show" on the "Linda L Garland" tab
     And I click "Show" on the "Person Details" section under "Linda L Garland"
-    And I set "Percentage Effort" for "Linda L Garland" as "5"
+    And I set "Percentage Effort" under "Linda L Garland" as "5"
     And I click "Hide" on the "Linda L Garland" tab
     And I click "Show" on the "Amanda F Baker" tab
     And I click "Show" on the "Person Details" section under "Amanda F Baker"
-    And I set "Percentage Effort" for "Amanda F Baker" as "20"
+    And I set "Percentage Effort" under "Amanda F Baker" as "20"
     And I click "Hide" on the "Amanda F Baker" tab
     And I fill out the Combined Credit Split for "Linda L Garland" with the following:
       | Credit for Award | 25 |
@@ -90,7 +89,7 @@ Feature: proposal creation and submission
     And I click "Show" on the "Project Information" tab
     And I set "Prj Location" to "0211-0124-"
     And I set "F&A Rate" to "51.500"
-    And I click the "Save" button 
+    And I click the "Save" button
 
 
   When I am on the "Questions" document tab
@@ -126,26 +125,26 @@ Feature: proposal creation and submission
     And I click "Show" on the "Grants.gov Questions" tab
     And I answer the questions under "Grants.gov Questions" with:
           | #      | Answer |
-          |  1     | No     | 
-          |  2     | No     | 
-          |  3     | No     | 
-          |  4     | No     | 
-          |  5     | No     | 
-          |  6     | N/A    | 
-          |  7     | No     | 
-          |  8     | No     | 
-          |  9     | No     | 
-          | 10     | No     | 
-          | 11     | N/A    | 
-          | 12     | No     | 
+          |  1     | No     |
+          |  2     | No     |
+          |  3     | No     |
+          |  4     | No     |
+          |  5     | No     |
+          |  6     | N/A    |
+          |  7     | No     |
+          |  8     | No     |
+          |  9     | No     |
+          | 10     | No     |
+          | 11     | N/A    |
+          | 12     | No     |
           | 13     | No     |
     And I click "Hide" on the "Grants.gov Questions" tab
     And I click "Show" on the "PRS Questions" tab
     And I answer the questions under "PRS Questions" with:
           | #      | Answer |
-          |  1     | No     | 
-          |  2     | No     | 
-          |  3     | No     | 
+          |  1     | No     |
+          |  2     | No     |
+          |  3     | No     |
     And I click "Hide" on the "PRS Questions" tab
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
@@ -155,18 +154,18 @@ Feature: proposal creation and submission
     And I set the "Name" to "Final Budget"
     And I click "Add" on "Budget Versions"
     And I click "Open" on "Final Budget"
-    
-    
-    And I fill out the "Budget Periods" table with:          
-          | #      | Direct Cost | F&A Cost | 
-          |  1     | 66000       | 34000    | 
-          |  2     | 66000       | 34000    | 
-          |  3     | 66000       | 34000    | 
-          |  4     | 66000       | 34000    | 
-          |  5     | 66000       | 34000    | 
+
+
+    And I fill out the "Budget Periods" table with:
+          | #      | Direct Cost | F&A Cost |
+          |  1     | 66000       | 34000    |
+          |  2     | 66000       | 34000    |
+          |  3     | 66000       | 34000    |
+          |  4     | 66000       | 34000    |
+          |  5     | 66000       | 34000    |
     And I click the "Recalculate" button
   Then I should see the "Budget Periods" table filled out with:
-          |  #     | Total Sponsor Cost | Direct Cost | F&A Cost  | 
+          |  #     | Total Sponsor Cost | Direct Cost | F&A Cost  |
           |  1     | 100,000.00         | 66,000.00   | 34,000.00 |
           |  2     | 100,000.00         | 66,000.00   | 34,000.00 |
           |  3     | 100,000.00         | 66,000.00   | 34,000.00 |
@@ -180,15 +179,15 @@ Feature: proposal creation and submission
           | F&A Cost           | 170,000.00 |
           | Unrecovered F&A    |       0.00 |
           | Cost Sharing       |       0.00 |
-      
+
 
     And I check the "Final?" checkbox
     And I set "Budget Status" to "Complete"
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
   When I click the "Return to Proposal" button
-   
-   
+
+
   When I am on the "Proposal Actions" document tab
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
