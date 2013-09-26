@@ -217,6 +217,7 @@ Feature: Renewal proposal creation and submission
 
 
   When I am on the "Grants.gov" document tab
+  When I am slow
     And I click "Show" on the "Submission Details" tab
     And I click the "Refresh" button
   Then I should see Received Date not null
