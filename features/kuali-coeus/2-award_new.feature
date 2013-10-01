@@ -1,6 +1,6 @@
-@test2
-
+@Award_New
 Feature: Award creation and submission
+
 
   As a Central Administrator
   I want to be able to create a new award based on an existing institutional proposal with the following attributes:
@@ -51,7 +51,7 @@ Feature: Award creation and submission
     And I should see "F.03: Medical - Life Sciences" in NSF Science Code
   When I set "Transaction Type" to "New"
     And I set the "Notice Date" to "01/01/2014"
-    And I set the "Comments" to something like "New award: Ant/Obl $500,000.00 02/01/2014-01/31/2019"
+    And I set the "Comments" text area to "New award: Ant/Obl $500,000.00 02/01/2014-01/31/2019"
     And I set the "Award Status" to "Active"
     And I set the "Account ID" to "3001500"
     And I set the "Award Type" to "Grant"
@@ -116,8 +116,8 @@ Feature: Award creation and submission
     And I wait for the document to finish being processed
   Then I should see "Document ID:Status" set to ":FINAL" in the document header
   When I click the "Return to Award" button
-  
-  
+
+
     And I am on the "Contacts" document tab
     And I click "Show" on the "Key Personnel and Credit Split" tab
   Then I should see the "Key Personnel" table filled out with:
@@ -156,13 +156,14 @@ Feature: Award creation and submission
     And I should see "Project Role" as "Other"
   When I click the "Save" button
     Then I should see the message "Document was successfully saved."
- 
- 
+
+
   When I am on the "Commitments" document tab
     And I click "Show" on the "Rates" tab
     And I set the "Rate" to "51.50"
     And I set the "Type" to "MTDC"
     And I set the "Fiscal Year" to "2014"
+  When I slow down
   Then I should see "Start Date" as "07/01/2013"
     And I should see "End Date" as "06/30/2014"
     And I should see "Campus" as "on"
@@ -173,11 +174,12 @@ Feature: Award creation and submission
   Then I should see "Start Date" as "07/01/2014"
     And I should see "End Date" as "06/30/2015"
     And I should see "Campus" as "on"
+  When I am fast
   When I click "Add" button
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
-   
-   
+
+
   When I am on the "Special Review" document tab
   Then I should see the "Special Review" table filled out with:
     | line | Type           | Approval Status |
