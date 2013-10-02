@@ -20,6 +20,9 @@ Feature: Award No Cost Extension creation and submission
     And I set "Award Title" to "Test scenario: create and submit basic proposal"
     And I click the "Search" button
   Then I should see one or more items retrieved
+##
+  When I sort by Award ID
+##  
   When I "open" the first record
     And I click the "Edit" button at the bottom of the page
   Then I should see "Description" set to "Garland, NIA, 3001500"
@@ -50,8 +53,9 @@ Feature: Award No Cost Extension creation and submission
     And I set "Modification ID" to "05"
     And I click "Save" button
   Then I should see the message "Document was successfully saved."
-
-
+##
+  When I slow down
+##
   When I click the "Time & Money" button
     And I click the "Edit" button at the bottom of the page
     And I set "Transaction Type" to "No Cost Extension"
@@ -61,15 +65,21 @@ Feature: Award No Cost Extension creation and submission
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
   When I click "Show" on the "Direct/F&A Funds Distribution" tab
-    And I set "end date" in row 5 to "06/11/2019"
+    And I set "End Date" in row "5" to "06/11/2019" under the "Direct/F&A Funds Distribution" table
     And I click the "Save" button
+##    
+    And I am fast
+##  
   Then I should see the message "Document was successfully saved."
   When I click the "Submit" button
     And I wait for the document to finish being processed
   Then I should see "Document ID:Status" set to ":FINAL" in the document header
+
+
   When I click the "Return to Award" button
-
-
+##
+    And I slow down  
+##
     And I am on the "Commitments" document tab
     And I click "Show" on the "Rates" tab
     And I set the "Rate" to "51.50"
@@ -99,7 +109,11 @@ Feature: Award No Cost Extension creation and submission
   Then I should see "Start Date" as "07/01/2018"
     And I should see "End Date" as "06/30/2019"
     And I should see "Campus" as "on"
-  When I click the "Save" button
+  When I click "Add" button
+    And I click the "Save" button
+##
+    And I am fast
+##
   Then I should see the message "Document was successfully saved."
 
 
