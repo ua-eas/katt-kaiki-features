@@ -99,6 +99,7 @@ Feature: Resubmission proposal creation and submission
   
   
   When I am on the "Custom Data" document tab
+    And I slow down
     And I click "Show" on the "Project Information" tab
     And I should see "Prj Location" set to "0211-0124-"
     And I should see "F&A Rate" set to "51.500"
@@ -106,6 +107,7 @@ Feature: Resubmission proposal creation and submission
   
   
   When I am on the "Questions" document tab
+    And I am fast
     And I click "Show" on the "Does the Proposed Work Include any of the Following?" tab
     And I should see the questions under "Does the Proposed Work Include any of the Following?" with:
             | #      | Answer |
