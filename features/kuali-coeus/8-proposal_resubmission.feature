@@ -162,7 +162,6 @@ Feature: Resubmission proposal creation and submission
             |  3     | No     |
     And I click "Hide" on the "PRS Questions" tab
     And I click the "Save" button
-    And I am fast
   Then I should see the message "Document was successfully saved."
   
   
