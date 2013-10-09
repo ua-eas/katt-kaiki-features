@@ -1,13 +1,18 @@
 Kaiki Features
 ===================
 
-This is the project which will hold all of the Cucumber feature files for UofA
+
+Introduction
+------------
+
+This is the repository that holds all of the Cucumber feature files for UofA.
+
+* As of 9 Oct, 2013, only feature files for the Kuali Coeus system are housed here.
 
 
-### Rakefile Requirements
+Rakefile Requirements
+---------------------
 
-* `rake (10.1.0, 0.9.2.2)` should be installed to run rake tasks.
-* `--tags` are used to call some rake tasks, `@kctest` is for tests that dont need to be run in order.
-* The tags need to be added to line one of each feature file.
-* An ECE.rb file with an array of tags is stored in the `katt-kaiki/features/support/`, this is used to run features files in order.
-* Then the rake task: `rake run` can be used to run everything in order.
+Each feature file will need to have a tag name appended to the top of the file. This tag name can either refer to the
+feature file itself, if the tests need to be run in a certain order, or can be "@kctest" if it doesn't matter when
+the test is run.

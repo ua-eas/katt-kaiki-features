@@ -192,6 +192,7 @@ Feature: Award creation and submission
 
 
   When I am on the "Custom Data" document tab
+    And I slow down
     And I click "Show" on the "Project Information" tab
   Then I should see "Prj Location (Bldg#-Rm#-Other):" as "0211-0124-"
     And I should see "F&A Rate % (ex: 51.000/51.500):" as "51.500"
@@ -199,6 +200,7 @@ Feature: Award creation and submission
 
 
   When I am on the "Award Actions" document tab
+    And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   Then I should see "No Validation Errors present."
