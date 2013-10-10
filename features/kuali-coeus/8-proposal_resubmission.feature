@@ -30,7 +30,7 @@ Feature: Resubmission proposal creation and submission
     And I click "Show" on the "Copy to New Document" tab
     And I check the "Budget?" checkbox
     And I set "Lead Unit" to "0710"
-    And I should see "Questionnaires?" checked
+    And I should see the "Questionnaires?" checkbox is "checked"
     And I click the "copy proposal" button
   Then I should see "Description" set to "Garland, NIA, $500,000"
     And I should see "Proposal Type" set to "New"
