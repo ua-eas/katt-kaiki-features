@@ -20,6 +20,9 @@ Feature: Award administrative amendment
      And I set "Award Title" to "Test scenario: create and submit basic proposal"
      And I click the "Search" button
   Then I should see one or more items retrieved
+##
+  When I sort by Award ID
+##  
   When I "open" the first record
      And I click the "Edit" button at the bottom of the page
   Then I should see "Description" set to "Garland, NIA, 3001500"
@@ -47,7 +50,7 @@ Feature: Award administrative amendment
      And I set "Transaction Type" to "Administrative Amendment"
      And I set "Notice Date" to "03/01/2014"
      And I set "Comments" text area to "Mod 3: Change sponsor and add prime"
-     And I set "Sponsor ID" to "01052"
+     And I set "Sponsor ID" to "010152"
   Then I should see "Arizona State University" under the sponsor code
   When I set "Prime Sponsor" to "010803"
   Then I should see "National Institute on Aging" under the sponsor code
