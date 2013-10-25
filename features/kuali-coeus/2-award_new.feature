@@ -192,10 +192,10 @@ Feature: Award creation and submission
 
 
   When I am on the "Custom Data" document tab
-    And I slow down
     And I click "Show" on the "Project Information" tab
   Then I should see "Prj Location (Bldg#-Rm#-Other):" as "0211-0124-"
     And I should see "F&A Rate % (ex: 51.000/51.500):" as "51.500"
+    And I slow down
   When I click the "Save" button
 
 
