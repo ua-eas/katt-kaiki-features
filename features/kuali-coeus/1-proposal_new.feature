@@ -86,10 +86,10 @@ Feature: proposal creation and submission
 
 
   When I am on the "Custom Data" document tab
-    And I slow down
     And I click "Show" on the "Project Information" tab
     And I set "Prj Location" to "0211-0124-"
     And I set "F&A Rate" to "51.500"
+    And I slow down
     And I click the "Save" button
 
 
@@ -148,16 +148,16 @@ Feature: proposal creation and submission
           |  2     | No     |
           |  3     | No     |
     And I click "Hide" on the "PRS Questions" tab
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Budget Versions" document tab
+    And I am fast
     And I set the "Name" to "Final Budget"
     And I click "Add" on "Budget Versions"
     And I click "Open" on "Final Budget"
-
-
     And I fill out the "Budget Periods" table with:
           | #      | Direct Cost | F&A Cost |
           |  1     | 66000       | 34000    |
@@ -181,8 +181,6 @@ Feature: proposal creation and submission
           | F&A Cost           | 170,000.00 |
           | Unrecovered F&A    |       0.00 |
           | Cost Sharing       |       0.00 |
-
-
     And I check the "Final?" checkbox
     And I set "Budget Status" to "Complete"
     And I click the "Save" button

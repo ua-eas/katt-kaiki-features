@@ -119,10 +119,10 @@ Feature: Administrative change proposal creation and submission
   
   
   When I am on the "Custom Data" document tab
-    And I slow down
     And I click "Show" on the "Project Information" tab
     And I set "Prj Location" to "0211-0124-"
     And I set "F&A Rate" to "51.500"
+    And I slow down
     And I click the "Save" button
   
   
@@ -190,11 +190,13 @@ Feature: Administrative change proposal creation and submission
     And I click "Add" on "Budget Versions"
     And I check the "Final" checkbox
     And I set "Budget Status" to "Complete"
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
   
   
   When I am on the "Proposal Actions" document tab
+    And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   Then I should see "No Validation Errors present."

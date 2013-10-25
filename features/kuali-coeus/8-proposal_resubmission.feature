@@ -99,10 +99,10 @@ Feature: Resubmission proposal creation and submission
   
   
   When I am on the "Custom Data" document tab
-    And I slow down
     And I click "Show" on the "Project Information" tab
     And I should see "Prj Location" set to "0211-0124-"
     And I should see "F&A Rate" set to "51.500"
+    And I slow down
     And I click the "Save" button
   
   
@@ -161,11 +161,13 @@ Feature: Resubmission proposal creation and submission
             |  2     | No     |
             |  3     | No     |
     And I click "Hide" on the "PRS Questions" tab
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
   
   
   When I am on the "Budget Versions" document tab
+    And I am fast
     And I should see "Name" set to "Final Budget"
     And I should see "Version #" set to "1"
     And I should see "Direct Cost" set to "330,000.00"
