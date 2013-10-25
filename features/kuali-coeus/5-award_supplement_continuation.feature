@@ -112,12 +112,14 @@ Feature: Award supplement/continuation creation and submission
 
 
   When I am on the "Custom Data" document tab
-     And I click "Show" on the "Project Information" tab
-     And I click the "Save" button
+    And I click "Show" on the "Project Information" tab
+    And I slow down 
+    And I click the "Save" button
   Then I should not see a message at the top of the screen
 
 
   When I am on the "Award Actions" document tab
+    And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   Then I should see "No Validation Errors present."
