@@ -195,7 +195,7 @@ Feature: Award creation and submission
     And I click "Show" on the "Project Information" tab
   Then I should see "Prj Location (Bldg#-Rm#-Other):" as "0211-0124-"
     And I should see "F&A Rate % (ex: 51.000/51.500):" as "51.500"
-    And I slow down a lot
+    And I slow down by a lot
   When I click the "Save" button
 
 
