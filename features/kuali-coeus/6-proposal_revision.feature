@@ -131,7 +131,7 @@ Feature: Revision proposal creation and submission
     And I click "Show" on the "Project Information" tab
     And I set "Prj Location" to "0211-"
     And I set "F&A Rate" to "51.5"
-    And I slow down
+    And I slow down a lot
     And I click the "Save" button
   Then I should not see a message at the top of the screen
 
