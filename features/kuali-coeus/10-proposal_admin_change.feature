@@ -122,7 +122,7 @@ Feature: Administrative change proposal creation and submission
     And I click "Show" on the "Project Information" tab
     And I set "Prj Location" to "0211-0124-"
     And I set "F&A Rate" to "51.500"
-    And I slow down a lot
+    And I slow down by a lot
     And I click the "Save" button
   
   
