@@ -113,7 +113,7 @@ Feature: Award supplement/continuation creation and submission
 
   When I am on the "Custom Data" document tab
     And I click "Show" on the "Project Information" tab
-    And I slow down 
+    And I slow down a lot
     And I click the "Save" button
   Then I should not see a message at the top of the screen
 
