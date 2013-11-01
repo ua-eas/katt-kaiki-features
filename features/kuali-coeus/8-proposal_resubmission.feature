@@ -102,7 +102,7 @@ Feature: Resubmission proposal creation and submission
     And I click "Show" on the "Project Information" tab
     And I should see "Prj Location" set to "0211-0124-"
     And I should see "F&A Rate" set to "51.500"
-    And I slow down
+    And I slow down a lot
     And I click the "Save" button
   
   
