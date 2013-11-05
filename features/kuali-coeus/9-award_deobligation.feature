@@ -51,12 +51,12 @@ Feature: Award deobligation
     And I set "Comments" text area to "Mod 01A2: Yr 1 reduce Ant/Obl $50,000"
     And I set "Sponsor Award ID" to "R01AG012345"
     And I set "Modification ID" to "01A2"
+    And I slow down
     And I click "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I click the "Time & Money" button
-    And I slow down
     And I click the "Edit" button at the bottom of the page
     And I set "Transaction Type" to "Deobligation"
     And I set "Notice Date" to "02/15/2014"
@@ -77,21 +77,25 @@ Feature: Award deobligation
   When I click the "Return to Award" button
 
 
-    And I am on the "Contacts" document tab
+  When I am on the "Contacts" document tab
+    And I slow down
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Commitments" document tab
+    And I am fast
     And I click "Show" on the "Rates" tab
     And I should see the "F&A Rates" table filled out with:
-          | # | Rate  | Type | Fiscal Year | Start Date | End Date  | Campus | Source | Destination | Unrecovered F&A |
-          | 1 | 51.50 | MTDC | 2014        | 07/01/2013 | 06/30/2014| on     |        |             |                 |
-          | 2 | 51.50 | MTDC | 2015        | 07/01/2014 | 06/30/2015| on     |        |             |                 |
+      | # | Rate  | Type | Fiscal Year | Start Date | End Date  | Campus | Source | Destination | Unrecovered F&A |
+      | 1 | 51.50 | MTDC | 2014        | 07/01/2013 | 06/30/2014| on     |        |             |                 |
+      | 2 | 51.50 | MTDC | 2015        | 07/01/2014 | 06/30/2015| on     |        |             |                 |
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Award Actions" document tab
+    And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   Then I should see "No Validation Errors present."

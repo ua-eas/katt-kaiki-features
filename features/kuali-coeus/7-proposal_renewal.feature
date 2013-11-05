@@ -40,11 +40,13 @@ Feature: Renewal proposal creation and submission
     And I set "Sponsor Deadline Date" to "10/01/2018"
     And I set the "NSF Science Code" to "F.02: Biological - Life Sciences"
     And I set "Sponsor Proposal ID" to "AG012345"
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Grants.gov" document tab
+    And I am fast
     And I start a lookup for "Grants.gov"
     And I set "Opportunity ID" to "CSS-120809-SF424RR-V12"
     And I click the "Search" button
@@ -59,11 +61,13 @@ Feature: Renewal proposal creation and submission
     And I should see "Closing Date" set to "12/31/2014 12:00 AM"
     And I should see "Instruction Page" set to active URL "http://at07apply.grants.gov/apply/opportunities/instructions/oppCSS-120809-SF424RR-V12-cfda00.000-cidNEWRRFORM-instructions.doc"
     And I should see "Schema URL" set to active URL "http://at07apply.grants.gov/apply/opportunities/schemas/applicant/oppCSS-120809-SF424RR-V12-cfda00.000-cidNEWRRFORM.xsd"
+    And I slow down
   When I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Key Personnel" document tab
+    And I am fast
     And I start a lookup for "Employee"
     And I set "Last Name" to "Garland"
     And I click the "Search" button
@@ -79,26 +83,30 @@ Feature: Renewal proposal creation and submission
     And I click "Hide" on the "Linda L Garland" tab
     And I fill out the Combined Credit Split for "Linda L Garland" with the following:
       | Credit for Award | 100 |
-      | F&A Revenue | 100 |
+      | F&A Revenue      | 100 |
     And I fill out the Combined Credit Split for "0721 - Cancer Center Division" under "Linda L Garland" with the following:
       | Credit for Award | 75 |
-      | F&A Revenue | 75 |
+      | F&A Revenue      | 75 |
     And I fill out the Combined Credit Split for "0713 - Medicine" under "Linda L Garland" with the following:
       | Credit for Award | 25 |
-      | F&A Revenue | 25 |
+      | F&A Revenue      | 25 |
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Special Review" document tab
+    And I am fast
     And I set the "Type" to "Human Subjects"
     And I set the "Approval Status" to "Pending"
     And I click "Add" on "Special Review"
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Custom Data" document tab
+    And I am fast
     And I click "Show" on the "Project Information" tab
     And I set "Prj Location" to "0211-0124-"
     And I set "F&A Rate" to "51.500"
@@ -111,25 +119,25 @@ Feature: Renewal proposal creation and submission
     And I am fast
     And I click "Show" on the "Does the Proposed Work Include any of the Following?" tab
     And I answer the questions under "Does the Proposed Work Include any of the Following?" with:
-      | # | Answer |
-      | 1 | No     |
-      | 2 | No     |
-      | 3 | Yes    |
-      | 4 | No     |
-      | 5 | No     |
-      | 6 | No     |
-      | 7 | No     |
-      | 8 | No     |
-      | 9 | No     |
-      | 10 | No    |
-      | 11 | No    |
-      | 12 | Yes   |
-      | 13 | No    |
-      | 14 | No    |
-      | 15 | No    |
-      | 16 | No    |
-      | 17 | No    |
-      | 18 | No    |
+      | #  | Answer |
+      | 1  | No     |
+      | 2  | No     |
+      | 3  | Yes    |
+      | 4  | No     |
+      | 5  | No     |
+      | 6  | No     |
+      | 7  | No     |
+      | 8  | No     |
+      | 9  | No     |
+      | 10 | No     |
+      | 11 | No     |
+      | 12 | Yes    |
+      | 13 | No     |
+      | 14 | No     |
+      | 15 | No     |
+      | 16 | No     |
+      | 17 | No     |
+      | 18 | No     |
     And I click "Hide" on the "Does the Proposed Work Include any of the Following?" tab
     And I click "Show" on the "F&A (Indirect Cost) Questions" tab
     And I answer the questions under "F&A (Indirect Cost) Questions" with:
@@ -140,20 +148,20 @@ Feature: Renewal proposal creation and submission
     And I click "Hide" on the "F&A (Indirect Cost) Questions" tab
     And I click "Show" on the "Grants.gov Questions" tab
     And I answer the questions under "Grants.gov Questions" with:
-      | # | Answer |
-      | 1 | No     |
-      | 2 | No     |
-      | 3 | No     |
-      | 4 | No     |
-      | 5 | No     |
-      | 6 | N/A    |
-      | 7 | No     |
-      | 8 | No     |
-      | 9 | No     |
-      | 10 | No    |
-      | 11 | N/A   |
-      | 12 | No    |
-      | 13 | No    |
+      | #  | Answer |
+      | 1  | No     |
+      | 2  | No     |
+      | 3  | No     |
+      | 4  | No     |
+      | 5  | No     |
+      | 6  | N/A    |
+      | 7  | No     |
+      | 8  | No     |
+      | 9  | No     |
+      | 10 | No     |
+      | 11 | N/A    |
+      | 12 | No     |
+      | 13 | No     |
     And I click "Hide" on the "Grants.gov Questions" tab
     And I click "Show" on the "PRS Questions" tab
     And I answer the questions under "PRS Questions" with:
@@ -181,12 +189,12 @@ Feature: Renewal proposal creation and submission
       | 5 | 99000       | 51000    |
     And I click the "Recalculate" button
   Then I should see the "Budget Periods" table filled out with:
-      | # | Total Sponsor Cost | Direct Cost | F&A Cost  |
-      | 1 | 150,000.00         | 99,000.00   | 51,000.00 |
-      | 2 | 150,000.00         | 99,000.00   | 51,000.00 |
-      | 3 | 150,000.00         | 99,000.00   | 51,000.00 |
-      | 4 | 150,000.00         | 99,000.00   | 51,000.00 |
-      | 5 | 150,000.00         | 99,000.00   | 51,000.00 |
+    | # | Total Sponsor Cost | Direct Cost | F&A Cost  |
+    | 1 | 150,000.00         | 99,000.00   | 51,000.00 |
+    | 2 | 150,000.00         | 99,000.00   | 51,000.00 |
+    | 3 | 150,000.00         | 99,000.00   | 51,000.00 |
+    | 4 | 150,000.00         | 99,000.00   | 51,000.00 |
+    | 5 | 150,000.00         | 99,000.00   | 51,000.00 |
     And I should see Budget Totals calculated as:
       | Period Start Date | 02/01/2019 |
       | Period End Date   | 01/31/2024 |
@@ -197,12 +205,14 @@ Feature: Renewal proposal creation and submission
       | Cost Sharing      | 0.00       |
   When I check the "Final?" checkbox
     And I set "Budget Status" to "Complete"
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
   When I click the "Return to Proposal" button
 
 
-    And I am on the "Proposal Actions" document tab
+  When I am on the "Proposal Actions" document tab
+    And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   Then I should see "No Validation Errors present."

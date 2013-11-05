@@ -70,6 +70,7 @@ Feature: Award creation and submission
   When I click "Apply" on "Sponsor Template"
     And I click "Yes" to "Are you sure you want to apply this Sponsor Template?"
     And I click "No" to "Cost Share information is already defined in this award.  Do you want to replace current Cost Share information with selected To Be Determined template information?"
+    And I slow down
     And I click "Save" button
   Then I should see the message "Document was successfully saved."
     And I should see "Document ID:Status" set to ":SAVED" in the document header
@@ -78,6 +79,7 @@ Feature: Award creation and submission
 
 
   When I click the "Time & Money" button
+    And I am fast
   Then I should see "01/31/2019" under Project End
   When I set the "Oblg. Start" to "02/01/2014"
     And I set the "Oblg. End" to "01/31/2015"
@@ -102,8 +104,8 @@ Feature: Award creation and submission
       |  4     | 66,000.00   | 34,000.00 |
       |  5     | 66,000.00   | 34,000.00 |
     And I should see Total calculated as:
-        |Direct Cost 			| $330,000.00 |
-        |F&A Cost   			| $170,000.00 |
+      |Direct Cost 			| $330,000.00 |
+      |F&A Cost   			| $170,000.00 |
     And I should see "Total Anticipated(Direct + F&A):" set to "$500,000.00"
   When I click the "Save" button
   Then I should see the message "Document was successfully saved."
@@ -118,7 +120,7 @@ Feature: Award creation and submission
   When I click the "Return to Award" button
 
 
-    And I am on the "Contacts" document tab
+  When I am on the "Contacts" document tab
     And I click "Show" on the "Key Personnel and Credit Split" tab
   Then I should see the "Key Personnel" table filled out with:
     | line  | Person          | Unit                   | Project Role    | Office Phone | Email                     |
@@ -146,19 +148,21 @@ Feature: Award creation and submission
       | F&A Revenue      | 80 |
     And I click the "Recalculate" button
   Then I should see Combined Credit Split for "Linda L Garland" with the following:
-      | Credit for Award | 20.00 |
-      | F&A Revenue      | 20.00 |
+    | Credit for Award | 20.00 |
+    | F&A Revenue      | 20.00 |
     And I should see Combined Credit Split for "Amanda F Baker" with the following:
       | Credit for Award | 80.00 |
       | F&A Revenue      | 80.00 |
   When I click "Show" on the "Sponsor Contacts" tab
   Then I should see "Person or Organization" as "Last Name TBD, First Name TBD Middle Name TBD"
     And I should see "Project Role" as "Other"
+    And I slow down
   When I click the "Save" button
     Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Commitments" document tab
+    And I am fast
     And I click "Show" on the "Rates" tab
     And I set the "Rate" to "51.50"
     And I set the "Type" to "MTDC"
@@ -176,22 +180,26 @@ Feature: Award creation and submission
     And I should see "Campus" as "on"
   When I am fast
   When I click "Add" button
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Special Review" document tab
+    And I am fast
   Then I should see the "Special Review" table filled out with:
     | line | Type           | Approval Status |
     | 1    | Human Subjects | Approved        |
   When I fill out the "Special Review" table with:
     | line | Approval Date |
     |  1   | 01/15/2014    |
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Custom Data" document tab
+    And I am fast
     And I click "Show" on the "Project Information" tab
   Then I should see "Prj Location (Bldg#-Rm#-Other):" as "0211-0124-"
     And I should see "F&A Rate % (ex: 51.000/51.500):" as "51.500"

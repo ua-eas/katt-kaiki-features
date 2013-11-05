@@ -46,11 +46,13 @@ Feature: Award supplement/continuation creation and submission
     And I set the "Comments" text area to "Mod 02A1: Yr 2 Adjusted for revised budget and cost sharing"
     And I set "Sponsor Award ID" to "R01AG012345"
     And I set "Modification ID" to "02A1"
+    And I slow down
     And I click "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I click the "Time & Money" button
+    And I am fast
     And I click the "Edit" button at the bottom of the page
     And I set "Transaction Type" to "Continuation/Supplement"
     And I set "Notice Date" to "02/01/2015"
@@ -60,20 +62,20 @@ Feature: Award supplement/continuation creation and submission
     And I should see the message "Warning exists in Direct/F&A Funds Distribution section."
   When I click "Show" on the "Direct/F&A Funds Distribution" tab
     And I fill out the "Direct/F&A Funds Distribution" table with:
-        |  #     | Direct Cost | F&A Cost |
-        |  1     | 66000.00    | 34000.00 |
-        |  2     | 116000.00   | 34000.00 |
-        |  3     | 66000.00    | 34000.00 |
-        |  4     | 66000.00    | 34000.00 |
-        |  5     | 66000.00    | 34000.00 |
+      |  #     | Direct Cost | F&A Cost |
+      |  1     | 66000.00    | 34000.00 |
+      |  2     | 116000.00   | 34000.00 |
+      |  3     | 66000.00    | 34000.00 |
+      |  4     | 66000.00    | 34000.00 |
+      |  5     | 66000.00    | 34000.00 |
     And I click the "Recalculate" button
   Then I should see the "Direct/F&A Funds Distribution" table filled out with:
-        |  #     | Direct Cost | F&A Cost  |
-        |  1     | 66,000.00   | 34,000.00 |
-        |  2     | 116,000.00  | 34,000.00 |
-        |  3     | 66,000.00   | 34,000.00 |
-        |  4     | 66,000.00   | 34,000.00 |
-        |  5     | 66,000.00   | 34,000.00 |
+    |  #     | Direct Cost | F&A Cost  |
+    |  1     | 66,000.00   | 34,000.00 |
+    |  2     | 116,000.00  | 34,000.00 |
+    |  3     | 66,000.00   | 34,000.00 |
+    |  4     | 66,000.00   | 34,000.00 |
+    |  5     | 66,000.00   | 34,000.00 |
       And I should see Total calculated as:
         |Direct Cost      | $380,000.00 |
         |F&A Cost         | $170,000.00 |
@@ -85,11 +87,13 @@ Feature: Award supplement/continuation creation and submission
   Then I should see "Document ID:Status" set to something like ":FINAL" in the document header
   When I click the "Return to Award" button
   Then I should see "Anticipated Amount" set to "$550,000.00"
+    And I slow down
   When I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Contacts" document tab
+    And I am fast
   Then I should see the message "Document was successfully saved."
 
 
@@ -102,6 +106,7 @@ Feature: Award supplement/continuation creation and submission
   Then I should see the "Cost Sharing" table filled out with:
     | # | Percentage | Type             | Project Period | Source      | Destination | Commitment Amount  | Cost Share Met | Verification Date | Actions |
     | 1 |            | To Be Determined | 2              | State Funds |             | 1.00               |                |                   |         |
+    And I slow down
     And I click the "Save" button
     And I should see the message "Document was successfully saved."
 
@@ -112,6 +117,7 @@ Feature: Award supplement/continuation creation and submission
 
 
   When I am on the "Custom Data" document tab
+    And I am fast
     And I click "Show" on the "Project Information" tab
     And I slow down by a lot
     And I click the "Save" button
