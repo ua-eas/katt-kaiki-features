@@ -3,7 +3,7 @@ Feature: Unlink an institutional proposal
 
 
   As a Central Administrator
-  I want to be able to unlink an institutional proposal from an existing award 
+  I want to be able to unlink an institutional proposal from an existing award
 
 
   Background:
@@ -29,26 +29,26 @@ Feature: Unlink an institutional proposal
     And I should see "Status" set to "Funded"
   When I click the "Edit" button at the bottom of the page
   Then I set the "Explanation:" text area to "Unlink Awd 001234-00001 Acct 3001500"
-  
-  
+
+
   When I am on the "Institutional Proposal Actions" document tab
     And I click "Show" on the "Funded Awards" tab
     And I check the "Actions" checkbox
     And I click the "Unlock Selected" button
     And I click the "Yes" button
-    
-    
-    And I am on the "Institutional Proposal" document tab
-    And I click "Show" on the "Institutional Proposal" tab  
+
+
+  When I am on the "Institutional Proposal" document tab
+    And I click "Show" on the "Institutional Proposal" tab
   Then I should see "Proposal Type" set to "New"
     And I should see "Updated By" set to "sandovar"
     And I should see "Project Title" set to "Test scenario:"
     And I should see "Status" set to "Pending"
   When I set "Project Title" text area to "Test scenario: IP unlinked"
     And I set "Activity Type" to "Research Training"
-    
-    
-    And I am on the "Institutional Proposal Actions" document tab
+
+
+  When I am on the "Institutional Proposal Actions" document tab
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   Then I should see "No Validation Errors present."

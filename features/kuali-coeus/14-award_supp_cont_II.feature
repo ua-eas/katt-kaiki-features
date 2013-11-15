@@ -46,12 +46,12 @@ Feature: Award supplement/continuation II creation and submission
     And I set the "Comments" text area to "Mod 02: Yr 2 Increase Obligated, Decrease Anticipated"
     And I set "Sponsor Award ID" to "R01AG012345"
     And I set "Modification ID" to "02"
+    And I slow down
     And I click "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I click the "Time & Money" button
-    And I slow down
     And I click the "Edit" button at the bottom of the page
     And I set "Transaction Type" to "Continuation/Supplement"
     And I set "Notice Date" to "02/01/2015"
@@ -75,11 +75,11 @@ Feature: Award supplement/continuation II creation and submission
   Then I should see "Anticipated Amount" set to "$400,000.00"
     And I should see "Obligated Amount" set to "$105,000.00"
   When I click the "Save" button
-    And I am fast
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Award Actions" document tab
+    And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   Then I should see "No Validation Errors present."

@@ -26,7 +26,7 @@ Feature: Resubmission proposal creation and submission
   When I "view" the first record
 
 
-    And I am on the "Proposal Actions" document tab
+  When I am on the "Proposal Actions" document tab
     And I click "Show" on the "Copy to New Document" tab
     And I check the "Budget?" checkbox
     And I set "Lead Unit" to "0710"
@@ -59,11 +59,13 @@ Feature: Resubmission proposal creation and submission
   When I click "Show" on the "Sponsor & Program Information" tab
     And I set "Sponsor Deadline Date" to "03/01/2014"
     And I set the "NSF Science Code" to "F.02: Biological - Life Sciences"
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
-  
-  
+
+
   When I am on the "Key Personnel" document tab
+    And I am fast
     And I click "Show" on the "Linda L Garland" tab
     And I click "Show" on the "Person Details" section under "Linda L Garland"
     And I should see "Percentage Effort" for "Linda L Garland" as "5.00"
@@ -73,99 +75,103 @@ Feature: Resubmission proposal creation and submission
     And I should see "Percentage Effort" for "Amanda F Baker" as "20.00"
     And I click "Hide" on the "Amanda F Baker" tab
     And I should see Combined Credit Split for "Linda L Garland" with the following:
-        | Credit for Award | 25.00 |
-        | F&A Revenue      | 25.00 |
+      | Credit for Award | 25.00 |
+      | F&A Revenue      | 25.00 |
     And I fill out the Combined Credit Split for "0710 - Cellular & Molecular Medicine" under "Linda L Garland" with the following:
-        | Credit for Award | 70.00  |
-        | F&A Revenue      | 70.00  |
+      | Credit for Award | 70.00  |
+      | F&A Revenue      | 70.00  |
     And I fill out the Combined Credit Split for "0721 - Cancer Center Division" under "Linda L Garland" with the following:
-        | Credit for Award | 30.00  |
-        | F&A Revenue      | 30.00  |
-      And I should see Combined Credit Split for "Amanda F Baker" with the following:
-        | Credit for Award | 75.00 |
-        | F&A Revenue      | 75.00 |
-      And I should see Combined Credit Split for "0721 - Cancer Center Division" under "Amanda F Baker" with the following:
-        | Credit for Award | 100.00 |
-        | F&A Revenue      | 100.00 |
-      And I click the "Save" button
-  Then I should see the message "Document was successfully saved."
-  
-  
-  When I am on the "Special Review" document tab
-    And I should see "Type" set to "Human Subjects"
-    And I should see "Approval Status" set to "Approved"
+      | Credit for Award | 30.00  |
+      | F&A Revenue      | 30.00  |
+    And I should see Combined Credit Split for "Amanda F Baker" with the following:
+      | Credit for Award | 75.00 |
+      | F&A Revenue      | 75.00 |
+    And I should see Combined Credit Split for "0721 - Cancer Center Division" under "Amanda F Baker" with the following:
+      | Credit for Award | 100.00 |
+      | F&A Revenue      | 100.00 |
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
-  
-  
+
+
+  When I am on the "Special Review" document tab
+    And I am fast
+    And I should see "Type" set to "Human Subjects"
+    And I should see "Approval Status" set to "Approved"
+    And I slow down
+    And I click the "Save" button
+  Then I should see the message "Document was successfully saved."
+
+
   When I am on the "Custom Data" document tab
+    And I am fast
     And I click "Show" on the "Project Information" tab
     And I should see "Prj Location" set to "0211-0124-"
     And I should see "F&A Rate" set to "51.500"
-    And I slow down
+    And I slow down by a lot
     And I click the "Save" button
-  
-  
+
+
   When I am on the "Questions" document tab
     And I am fast
     And I click "Show" on the "Does the Proposed Work Include any of the Following?" tab
     And I should see the questions under "Does the Proposed Work Include any of the Following?" with:
-            | #      | Answer |
-            |  1     | No     |
-            |  2     | No     |
-            |  3     | Yes    |
-            |  4     | No     |
-            |  5     | No     |
-            |  6     | No     |
-            |  7     | No     |
-            |  8     | No     |
-            |  9     | No     |
-            | 10     | No     |
-            | 11     | No     |
-            | 12     | Yes    |
-            | 13     | No     |
-            | 14     | No     |
-            | 15     | No     |
-            | 16     | No     |
-            | 17     | No     |
-            | 18     | No     |
+      | #      | Answer |
+      |  1     | No     |
+      |  2     | No     |
+      |  3     | Yes    |
+      |  4     | No     |
+      |  5     | No     |
+      |  6     | No     |
+      |  7     | No     |
+      |  8     | No     |
+      |  9     | No     |
+      | 10     | No     |
+      | 11     | No     |
+      | 12     | Yes    |
+      | 13     | No     |
+      | 14     | No     |
+      | 15     | No     |
+      | 16     | No     |
+      | 17     | No     |
+      | 18     | No     |
     And I click "Hide" on the "Does the Proposed Work Include any of the Following?" tab
     And I click "Show" on the "F&A (Indirect Cost) Questions" tab
     And I should see the questions under "F&A (Indirect Cost) Questions" with:
-            | #      | Answer |
-            |  1     | No     |
-            |  2     | No     |
-            |  3     | No     |
+      | #      | Answer |
+      |  1     | No     |
+      |  2     | No     |
+      |  3     | No     |
     And I click "Hide" on the "F&A (Indirect Cost) Questions" tab
     And I click "Show" on the "Grants.gov Questions" tab
     And I should see the questions under "Grants.gov Questions" with:
-            | #      | Answer |
-            |  1     | No     |
-            |  2     | No     |
-            |  3     | No     |
-            |  4     | No     |
-            |  5     | No     |
-            |  6     | N/A    |
-            |  7     | No     |
-            |  8     | No     |
-            |  9     | No     |
-            | 10     | No     |
-            | 11     | N/A    |
-            | 12     | No     |
-            | 13     | No     |
+      | #      | Answer |
+      |  1     | No     |
+      |  2     | No     |
+      |  3     | No     |
+      |  4     | No     |
+      |  5     | No     |
+      |  6     | N/A    |
+      |  7     | No     |
+      |  8     | No     |
+      |  9     | No     |
+      | 10     | No     |
+      | 11     | N/A    |
+      | 12     | No     |
+      | 13     | No     |
     And I click "Hide" on the "Grants.gov Questions" tab
     And I click "Show" on the "PRS Questions" tab
     And I should see the questions under "PRS Questions" with:
-            | #      | Answer |
-            |  1     | No     |
-            |  2     | No     |
-            |  3     | No     |
+      | #      | Answer |
+      |  1     | No     |
+      |  2     | No     |
+      |  3     | No     |
     And I click "Hide" on the "PRS Questions" tab
     And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
-  
-  
+
+
   When I am on the "Budget Versions" document tab
     And I am fast
     And I should see "Name" set to "Final Budget"
@@ -176,40 +182,42 @@ Feature: Resubmission proposal creation and submission
     And I should see "Budget Status" set to "Incomplete"
     And I should see the "Final?" checkbox is "unchecked"
     And I click "Open" on "Final Budget"
-  Then I click the "Yes" button 
+  Then I click the "Yes" button
   When I am on the "Parameters" document tab
     And I fill out the "Budget Periods" table with:
-            | #      | Period Start Date | Period End Date | Total Sponsor Cost | Direct Cost | F&A Cost |
-            |  1     | 07/01/2014        | 06/30/2015      | 25000              | 15000       | 10000    |
-            |  2     | 07/01/2015        | 06/30/2016      | 20000              | 10000       | 10000    |
-            |  3     | 07/01/2016        | 06/30/2017      | 20000              | 10000       | 10000    |
-            |  4     | 07/01/2017        | 06/30/2018      | 20000              | 10000       | 10000    |
-            |  5     | 07/01/2018        | 06/30/2019      | 15000              | 10000       |  5000    |
+      | #      | Period Start Date | Period End Date | Total Sponsor Cost | Direct Cost | F&A Cost |
+      |  1     | 07/01/2014        | 06/30/2015      | 25000              | 15000       | 10000    |
+      |  2     | 07/01/2015        | 06/30/2016      | 20000              | 10000       | 10000    |
+      |  3     | 07/01/2016        | 06/30/2017      | 20000              | 10000       | 10000    |
+      |  4     | 07/01/2017        | 06/30/2018      | 20000              | 10000       | 10000    |
+      |  5     | 07/01/2018        | 06/30/2019      | 15000              | 10000       |  5000    |
     And I click the "Recalculate" button
   Then I should see the "Budget Periods" table filled out with:
-            | #      | Period Start Date | Period End Date | Total Sponsor Cost | Direct Cost | F&A Cost  |
-            |  1     | 07/01/2014        | 06/30/2015      | 25,000.00          | 15,000.00   | 10,000.00 |
-            |  2     | 07/01/2015        | 06/30/2016      | 20,000.00          | 10,000.00   | 10,000.00 |
-            |  3     | 07/01/2016        | 06/30/2017      | 20,000.00          | 10,000.00   | 10,000.00 |
-            |  4     | 07/01/2017        | 06/30/2018      | 20,000.00          | 10,000.00   | 10,000.00 |
-            |  5     | 07/01/2018        | 06/30/2019      | 15,000.00          | 10,000.00   |  5,000.00 |
+    | #      | Period Start Date | Period End Date | Total Sponsor Cost | Direct Cost | F&A Cost  |
+    |  1     | 07/01/2014        | 06/30/2015      | 25,000.00          | 15,000.00   | 10,000.00 |
+    |  2     | 07/01/2015        | 06/30/2016      | 20,000.00          | 10,000.00   | 10,000.00 |
+    |  3     | 07/01/2016        | 06/30/2017      | 20,000.00          | 10,000.00   | 10,000.00 |
+    |  4     | 07/01/2017        | 06/30/2018      | 20,000.00          | 10,000.00   | 10,000.00 |
+    |  5     | 07/01/2018        | 06/30/2019      | 15,000.00          | 10,000.00   |  5,000.00 |
     And I should see Budget Totals calculated as:
-            | Period Start Date  | 07/01/2014 |
-            | Period End Date    | 06/30/2019 |
-            | Total Sponsor Cost | 100,000.00 |
-            | Direct Cost        |  55,000.00 |
-            | F&A Cost           |  45,000.00 |
-            | Unrecovered F&A    |       0.00 |
-            | Cost Sharing       |       0.00 |       
+      | Period Start Date  | 07/01/2014 |
+      | Period End Date    | 06/30/2019 |
+      | Total Sponsor Cost | 100,000.00 |
+      | Direct Cost        |  55,000.00 |
+      | F&A Cost           |  45,000.00 |
+      | Unrecovered F&A    |       0.00 |
+      | Cost Sharing       |       0.00 |
     And I check the "Final?" checkbox
     And I set "Budget Status" to "Complete"
+    And I slow down
     And I click the "Save" button
-  Then I click the "Yes" button
+    And I click the "Yes" button
     And I should see the message "Document was successfully saved."
-    And I click the "Return to Proposal" button  
-  
-  
+    And I click the "Return to Proposal" button
+
+
   When I am on the "Proposal Actions" document tab
+    And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   Then I should see "No Validation Errors present."

@@ -49,12 +49,12 @@ Feature: Award No Cost Extension creation and submission
     And I set "Comments" text area to "Mod 4: NCE to 6/11/2019"
     And I set "Sponsor Award ID" to "R01AG012345"
     And I set "Modification ID" to "05"
+    And I slow down
     And I click "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I click the "Time & Money" button
-    And I slow down
     And I click the "Edit" button at the bottom of the page
     And I set "Transaction Type" to "No Cost Extension"
     And I set "Notice Date" to "10/10/2018"
@@ -66,19 +66,19 @@ Feature: Award No Cost Extension creation and submission
     And I set "End Date" in row "5" to "06/11/2019" under the "Direct/F&A Funds Distribution" table
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
+    And I am fast
   When I click the "Submit" button
     And I wait for the document to finish being processed
-    And I am fast
   Then I should see "Document ID:Status" set to ":FINAL" in the document header
-
-
   When I click the "Return to Award" button
-    And I slow down  
-    And I am on the "Commitments" document tab
+
+
+  When I am on the "Commitments" document tab
     And I click "Show" on the "Rates" tab
     And I set the "Rate" to "51.50"
     And I set the "Type" to "MTDC"
     And I set the "Fiscal Year" to "2016"
+    And I slow down
   Then I should see "Start Date" as "07/01/2015"
     And I should see "End Date" as "06/30/2016"
     And I should see "Campus" as "on"
@@ -103,13 +103,15 @@ Feature: Award No Cost Extension creation and submission
   Then I should see "Start Date" as "07/01/2018"
     And I should see "End Date" as "06/30/2019"
     And I should see "Campus" as "on"
-  When I click "Add" button
-    And I click the "Save" button
     And I am fast
+  When I click "Add" button
+    And I slow down
+    And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Award Actions" document tab
+    And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   Then I should see "No Validation Errors present."
