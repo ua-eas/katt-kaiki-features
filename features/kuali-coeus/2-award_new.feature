@@ -10,75 +10,82 @@ Feature: Award creation and submission
     Time & Money Document
   So that the award moves through the workflow and ends in "Final" status.
 
-
   Background:
     Given I am up top
 
-  Scenario: Create and finalize new award
+  Scenario: Create and Finalize New Award
 
 
   Given I am backdoored as "sandovar"
-    And I am on the "Central Admin" tab
+    And I am on the "Central Admin" system tab
     When I click the "Award" portal link
-  Then I should see "Document ID:Status" set to ":INITIATED" in the document header
-  When I set the "Description" to "Garland, NIA, 3001500"
+  Then I should see "Document ID:Status" text set to ":INITIATED" in the document header
+  When I am in the "Document Overview" tab
+    And I set the "Description" to "Garland, NIA, 3001500"
     And I click "Show" on the "Funding Proposals" tab
     And I start a lookup for "Institutional Proposal ID"
-    And I set "Proposal Type" to "New"
-    And I set "Status" to "Pending"
-    And I set "Project Title" to "Test scenario: create and submit basic proposal"
+    And I set "Proposal Type" to "New" on the search page
+    And I set "Status" to "Pending" on the search page
+    And I set "Project Title" to "Test scenario: create and submit basic proposal" on the search page
     And I click the "Search" button
-  Then I should see one or more items retrieved
-  When I "return" the first record
+  Then I should see one or more items retrieved on the search page
+  When I "return" the first record on the search page
     And I click "Add" on "Funding Proposals"
-  Then I should see "PI" set to "Linda L Garland" in the document header
-    And I should see "Lead Unit" set to "Cancer Center Division" in the document header
-    And I should see "Sponsor Name" set to "National Institute on Aging" in the document header
-    And I should see "1" under the Award Version header
-    And I should see "Linda L Garland" under the Principal Investigator header
-    And I will see "0721" under the "Lead Unit" header in the "Funding Proposals" section
-    And I will see "Cancer Center Division" under the "Lead Unit" header in the "Funding Proposals" section
-    And I will see "010803" under the "Proposed Sponsor" header in the "Funding Proposals" section
-    And I will see "National Institute on Aging" under the "Proposed Sponsor" header in the "Funding Proposals" section
-    And I should see "02/01/2014" under the Proposed Start Date header
-    And I should see "01/31/2019" under the Proposed End Date header
-    And I should see "$500,000.00" under the Total Costs
-    And I should see "Test scenario: create and submit basic proposal" in the Award Title
-    And I should see "010803" in Sponsor ID
-    And I should see "National Institute on Aging" under the Sponsor ID
-    And I should see "0721" in Lead Unit ID
-    And I should see "Research" in Activity Type
-    And I should see "F.03: Medical - Life Sciences" in NSF Science Code
-  When I set "Transaction Type" to "New"
-    And I set the "Notice Date" to "01/01/2014"
-    And I set the "Comments" text area to "New award: Ant/Obl $500,000.00 02/01/2014-01/31/2019"
-    And I set the "Award Status" to "Active"
-    And I set the "Account ID" to "3001500"
-    And I set the "Award Type" to "Grant"
-    And I set the "Sponsor Award ID" to "1R01AG012345-01"
-    And I set the "Modification ID" to "01"
-    And I set the "CFDA Number" to "93.866"
-    And I set the "NSF Science Code" to "F.02: Biological - Life Sciences"
-    And I set the "Project Start Date" to "02/01/2014"
-    And I set the "Project End Date" to "01/31/2019"
-    And I set the "Execution Date" to "12/15/2013"
+  Then I should see "PI" text set to "Linda L Garland" in the document header
+    And I should see "Lead Unit" text set to "Cancer Center Division" in the document header
+    And I should see "Sponsor Name" text set to "National Institute on Aging" in the document header
+  When I am in the "Current Funding Proposals" section
+  Then I should see the Current Funding Proposals table filled out with:
+    | Award Version         | 1                           |
+    | Principal Investigator| Linda L Garland             |
+    | Lead Unit             | 0721                        |
+    | Lead Unit             | Cancer Center Division      |
+    | Proposed Sponsor      | 010803                      |
+    | Proposed Sponsor      | National Institute on Aging |
+    | Proposed Start Date   | 02/01/2014                  |
+    | Proposed End Date     | 01/31/2019                  |
+    | Total Costs           | $500,000.00                 |
+  When I am in the "Details & Dates" tab
+    And I am in the "Details and Dates" section
+  Then I should see "Award Title" set to "Test scenario: create and submit basic proposal" in the "Institution" subsection
+    And I should see "Lead Unit ID" set to "0721" in the "Institution" subsection
+    And I should see "Activity Type" set to "Research" in the "Institution" subsection
+    And I should see "Sponsor ID" set to "010803" in the "Sponsor" subsection
+    And I should see "Sponsor ID" text set to "National Institute on Aging" in the "Sponsor" subsection
+    And I should see "NSF Science Code" set to "F.03: Medical - Life Sciences" in the "Sponsor" subsection
+  When I set "Transaction Type" to "New" in the "Current Action" subsection
+    And I set the "Notice Date" to "01/01/2014" in the "Current Action" subsection
+    And I set the "Comments" to "New award: Ant/Obl $500,000.00 02/01/2014-01/31/2019" in the "Current Action" subsection
+    And I set the "Award Status" to "Active" in the "Institution" subsection
+    And I set the "Account ID" to "3001500" in the "Institution" subsection
+    And I set the "Award Type" to "Grant" in the "Institution" subsection
+    And I set the "Sponsor Award ID" to "1R01AG012345-01" in the "Sponsor" subsection
+    And I set the "Modification ID" to "01" in the "Sponsor" subsection
+    And I set the "CFDA Number" to "93.866" in the "Sponsor" subsection
+    And I set the "NSF Science Code" to "F.02: Biological - Life Sciences" in the "Sponsor" subsection
+    And I set the "Project Start Date" to "02/01/2014" in the "Time & Money" subsection
+    And I set the "Project End Date" to "01/31/2019" in the "Time & Money" subsection
+    And I set the "Execution Date" to "12/15/2013" in the "Time & Money" subsection
     And I click "Show" on the "Sponsor Template" tab
     And I start a lookup for "Sponsor Template Code"
     And I click the "search" button
-    And I return the record with "Sponsor Template Code" of "1"
-  Then I should see "To Be Determined" next to "Description"
+    And I return the record with "Sponsor Template Code" of "1" on the search page
+  Then I should see "Description" text set to "To Be Determined"
   When I click "Apply" on "Sponsor Template"
     And I click "Yes" to "Are you sure you want to apply this Sponsor Template?"
     And I click "No" to "Cost Share information is already defined in this award.  Do you want to replace current Cost Share information with selected To Be Determined template information?"
+    And I slow down
     And I click "Save" button
   Then I should see the message "Document was successfully saved."
-    And I should see "Document ID:Status" set to ":SAVED" in the document header
-    And I should see "Award ID: Account:" set to "-00001:3001500" in the document header
-    And I should see "Last Update" set to " by sandovar" in the document header
+    And I should see "Document ID:Status" text set to ":SAVED" in the document header
+    And I should see "Award ID: Account:" text set to "-00001:3001500" in the document header
+    And I should see "Last Update" text set to "by sandovar" in the document header
 
 
   When I click the "Time & Money" button
-  Then I should see "01/31/2019" under Project End
+    And I am fast
+    And I am in the "Award Hierarchy" tab
+  Then I should see "Project End" set to "01/31/2019"
   When I set the "Oblg. Start" to "02/01/2014"
     And I set the "Oblg. End" to "01/31/2015"
     And I set "Transaction Type Code" to "New"
@@ -87,7 +94,7 @@ Feature: Award creation and submission
   Then I should see the message "Document was successfully saved."
   When I click "Show" on the "Direct/F&A Funds Distribution" tab
     And I fill out the "Direct/F&A Funds Distribution" table with:
-      | #      | Direct Cost | F&A Cost |
+      |  #     | Direct Cost | F&A Cost |
       |  1     | 66000       | 34000    |
       |  2     | 66000       | 34000    |
       |  3     | 66000       | 34000    |
@@ -102,42 +109,43 @@ Feature: Award creation and submission
       |  4     | 66,000.00   | 34,000.00 |
       |  5     | 66,000.00   | 34,000.00 |
     And I should see Total calculated as:
-        |Direct Cost 			| $330,000.00 |
-        |F&A Cost   			| $170,000.00 |
-    And I should see "Total Anticipated(Direct + F&A):" set to "$500,000.00"
+      |Direct Cost 			| $330,000.00 |
+      |F&A Cost   			| $170,000.00 |
+    And I should see "Total Anticipated(Direct + F&A):" text set to "$500,000.00"
   When I click the "Save" button
   Then I should see the message "Document was successfully saved."
     And I should see the message "Warning exists in Direct/F&A Funds Distribution section."
-  When I set "Obligated" to "100000"
+  When I am in the "Award Hierarchy" tab
+    And I set "Obligated" to "100000"
     And I set "Anticipated" to "500000"
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
   When I click the "Submit" button
     And I wait for the document to finish being processed
-  Then I should see "Document ID:Status" set to ":FINAL" in the document header
+  Then I should see "Document ID:Status" text set to ":FINAL" in the document header
   When I click the "Return to Award" button
 
 
-    And I am on the "Contacts" document tab
+  When I am on the "Contacts" document tab
     And I click "Show" on the "Key Personnel and Credit Split" tab
   Then I should see the "Key Personnel" table filled out with:
     | line  | Person          | Unit                   | Project Role    | Office Phone | Email                     |
     | 1     | Linda L Garland | Cancer Center Division | PI/Contact      | 520-626-3434 | lgarland@azcc.arizona.edu |
     | 2     | Amanda F Baker  | Cancer Center Division | Co-Investigator | 520-626-0301 | abaker@azcc.arizona.edu   |
-  When I click "Show" on the "Person Details" section under "Linda L Garland"
-  Then I should see "Total Effort" for "Linda L Garland" as "5.00"
-  When I click "Hide" on the "Person Details" section under "Linda L Garland"
-    And I click "Show" on the "Person Details" section under "Amanda F Baker"
-  Then I should see "Total Effort" for "Amanda F Baker" as "20.00"
-  When I click "Hide" on the "Person Details" section under "Amanda F Baker"
-    And I click "Show" on the "Unit Details" section under "Linda L Garland"
-  Then I should see "Unit Name" for "Linda L Garland" as "Cancer Center Division"
-    And I should see "Unit Number" for "Linda L Garland" as "0721"
-  When I click "Hide" on the "Unit Details" section under "Linda L Garland"
-    And I click "Show" on the "Unit Details" section under "Amanda F Baker"
-  Then I should see "Unit Name" for "Amanda F Baker" as "Cancer Center Division"
-    And I should see "Unit Number" for "Amanda F Baker" as "0721"
-  When I click "Hide" on the "Unit Details" section under "Amanda F Baker"
+  When I click "Show" on the "Person Details" subsection under "Linda L Garland"
+  Then I should see "Total Effort" set to "5.00" in the "Person Details" subsection for "Linda L Garland"
+  When I click "Hide" on the "Person Details" subsection under "Linda L Garland"
+    And I click "Show" on the "Person Details" subsection under "Amanda F Baker"
+  Then I should see "Total Effort" set to "20.00" in the "Person Details" subsection for "Amanda F Baker"
+  When I click "Hide" on the "Person Details" subsection under "Amanda F Baker"
+    And I click "Show" on the "Unit Details" subsection under "Linda L Garland"
+  Then I should see "Unit Name" set to "Cancer Center Division" in the "Unit Details" subsection for "Linda L Garland"
+    And I should see "Unit Number" set to "0721" in the "Unit Details" subsection for "Linda L Garland"
+  When I click "Hide" on the "Unit Details" subsection under "Linda L Garland"
+    And I click "Show" on the "Unit Details" subsection under "Amanda F Baker"
+  Then I should see "Unit Name" set to "Cancer Center Division" in the "Unit Details" subsection for "Amanda F Baker"
+    And I should see "Unit Number" set to "0721" in the "Unit Details" subsection for "Amanda F Baker"
+  When I click "Hide" on the "Unit Details" subsection under "Amanda F Baker"
     And I fill out the Combined Credit Split for "Linda L Garland" with the following:
       | Credit for Award | 20 |
       | F&A Revenue      | 20 |
@@ -152,14 +160,18 @@ Feature: Award creation and submission
       | Credit for Award | 80.00 |
       | F&A Revenue      | 80.00 |
   When I click "Show" on the "Sponsor Contacts" tab
-  Then I should see "Person or Organization" as "Last Name TBD, First Name TBD Middle Name TBD"
-    And I should see "Project Role" as "Other"
+  Then I should see the Sponsor Contacts table filled out with:
+    | Person or Organization | Last Name TBD, First Name TBD Middle Name TBD |
+    | Project Role           | Other                                         |
+    And I slow down
   When I click the "Save" button
     Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Commitments" document tab
+    And I am fast
     And I click "Show" on the "Rates" tab
+    And I am in the "F&A Rates" section
     And I set the "Rate" to "51.50"
     And I set the "Type" to "MTDC"
     And I set the "Fiscal Year" to "2014"
@@ -176,26 +188,31 @@ Feature: Award creation and submission
     And I should see "Campus" as "on"
   When I am fast
   When I click "Add" button
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Special Review" document tab
+    And I am fast
+    And I am in the "Special Review" tab
   Then I should see the "Special Review" table filled out with:
-    | line | Type           | Approval Status |
-    | 1    | Human Subjects | Approved        |
+    |  #   | Type           | Approval Status |
+    |  1   | Human Subjects | Approved        |
   When I fill out the "Special Review" table with:
-    | line | Approval Date |
+    |  #   | Approval Date |
     |  1   | 01/15/2014    |
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Custom Data" document tab
-    And I slow down
+    And I am fast
     And I click "Show" on the "Project Information" tab
-  Then I should see "Prj Location (Bldg#-Rm#-Other):" as "0211-0124-"
-    And I should see "F&A Rate % (ex: 51.000/51.500):" as "51.500"
+  Then I should see "Prj Location (Bldg#-Rm#-Other):" set to "0211-0124-"
+    And I should see "F&A Rate" set to "51.500"
+    And I slow down by a lot
   When I click the "Save" button
 
 
@@ -203,9 +220,9 @@ Feature: Award creation and submission
     And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
-  Then I should see "No Validation Errors present."
-    And I should see "No Warnings present."
+  Then I should see the message "No Validation Errors present."
+    And I should see the message "No Warnings present."
   When I click the "Submit" button
     And I wait for the document to finish being processed
-  Then I should see "Document ID:Status" set to ":FINAL" in the document header
+  Then I should see "Document ID:Status" text set to ":FINAL" in the document header
     And I should see the message "Document was successfully submitted."
