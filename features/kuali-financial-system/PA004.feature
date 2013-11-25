@@ -47,7 +47,6 @@
     And I set "Building Code" to "300A" on the search page
     And I click the "Search" button
     And I return the record with "Building Code" of "300A" on the search page
-    And I set "Room" to "A502"
     And I start a lookup for "Room"
     And I set "Building Room Number" to "A502" on the search page
     And I click the "Search" button
