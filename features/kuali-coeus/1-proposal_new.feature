@@ -168,9 +168,9 @@ Feature: proposal creation and submission
     And I am in the "Budget Versions" tab
     And I set the "Name" to "Final Budget"
     And I click "Add" on "Budget Versions"
-    and I slow down
+    And I slow down
     And I click "Open" on "Final Budget"
-    and I am fast
+    And I am fast
     And I am in the "Budget Periods & Totals" tab
     And I am in the "Budget Periods" section
     And I fill out the "Budget Periods" table with:
