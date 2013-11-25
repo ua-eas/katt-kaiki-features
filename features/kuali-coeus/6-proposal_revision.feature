@@ -214,7 +214,9 @@ Feature: Revision proposal creation and submission
     And I am in the "Budget Versions" tab
     And I set the "Name" to "Final Budget"
     And I click "Add" on "Budget Versions"
+    and I slow down
     And I click "Open" on "Final Budget"
+    and I am fast
     And I am in the "Budget Periods & Totals" tab
     And I am in the "Budget Periods" section
   Then I should see the "Budget Periods" table filled out with:
