@@ -42,7 +42,6 @@
 
   When I click "Show" on the "Delivery" tab
     And I am in the "Final Delivery" section
-    And I click the "Date Required" calendar and set the date to "Today"
     And I start a lookup for "Building"
     And I set "Building Code" to "300A" on the search page
     And I click the "Search" button
