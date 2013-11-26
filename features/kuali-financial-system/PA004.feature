@@ -332,9 +332,6 @@
     And I set "Invoice Date" to "Today's Date"
     And I set "Vendor Invoice Amount" to "100"
     And I click the "continue" button
-  # #Clicking Yes is needed if you are reusing the same Invoice Number or
-  # # Vendor Invoice Amount
-    And I click the "Yes" button
 
 
   When I am in the "Document Overview" tab
@@ -695,8 +692,6 @@
     And I set "Credit Memo Date" to "Today's Date"
     And I set "Vendor Credit Memo Amount" to "10"
     And I click the "Continue" button
-  # #Clicking Yes is needed if you are reusing the same Credit Memo #
-    # And I click the "Yes" button
     And I should see "Status" text set to "SAVED" in the document header
     And I should see "Credit Memo Status" text set to "In Process" in the document header
     And I click the "Collapse All" button
