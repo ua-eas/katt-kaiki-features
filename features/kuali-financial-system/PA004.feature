@@ -385,7 +385,7 @@
 
 
   When I click "Show" on the "1099 Classification" tab
-    And I should see "Total" text set to "[Vendor Remit Amount]"
+#    And I should see "Total" text set to "[Vendor Remit Amount]"
     And I click the "save" button
     And I should see the message "Document was successfully saved."
     And I record this "document" number in the document header
@@ -474,7 +474,7 @@
 
 
   When I click "Show" on the "1099 Classification" tab
-    And I should see "Total" text set to "[Vendor Remit Amount]"
+#    And I should see "Total" text set to "[Vendor Remit Amount]"
     And I click the "save" button
     And I should see the message "Document was successfully saved."
     And I record this "document" number in the document header
@@ -563,7 +563,7 @@
 
 
   When I click "Show" on the "1099 Classification" tab
-    And I should see "Total" text set to "[Vendor Remit Amount]"
+#    And I should see "Total" text set to "[Vendor Remit Amount]"
     And I click the "save" button
     And I should see the message "Document was successfully saved."
     And I record this "document" number in the document header
@@ -652,7 +652,7 @@
 
 
   When I click "Show" on the "1099 Classification" tab
-    And I should see "Total" text set to "[Vendor Remit Amount]"
+#    And I should see "Total" text set to "[Vendor Remit Amount]"
     And I click the "save" button
     And I should see the message "Document was successfully saved."
     And I record this "document" number in the document header
@@ -734,7 +734,7 @@
 
 
   When I click "Show" on the "1099 Classification" tab
-    And I should see "Total" text set to "Grand Total:"
+#    And I should see "Total" text set to "Grand Total:"
     And I record this "document" number in the document header
     And I record this "vendor credit memo" number in the document header
     And I record this "vendor credit memo document" number in the document header
