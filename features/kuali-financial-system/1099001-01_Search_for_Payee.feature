@@ -51,7 +51,7 @@
    
   When I am in the "Edit 1099 Payment" tab
     And I set "Disbursement Date" to "11/01/2013" in the "New" subsection
-    And I set "Payment Type Code" to "Nonemployee Compensation" in the "New" subsection
+    And I set "1099 Income Type" to "Nonemployee Compensation" in the "New" subsection
     And I set "Amount" to "100.00" in the "New" subsection
     And I start a lookup for "1099 Payee ID"
     And I set "Vendor #" to "11223-0" on the search page
