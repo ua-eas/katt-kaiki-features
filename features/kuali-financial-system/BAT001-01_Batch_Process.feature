@@ -1,5 +1,5 @@
-@BAT001
-  Feature: BAT001-01 Batch Process
+@BAT001-01
+  Feature: BAT001 Batch Process
 
   Description:
   	Batch Process
@@ -30,26 +30,26 @@
    
   When I verify that an ".xml" file starting with "pdp_check" exists in "staging/pdp/paymentExtract" of the KFS working directory
 
-   And I run the "pdpExtractAchPaymentsJob" job in the "KFS-PDP" jobstream
-   And I run the "pdpSendAchAdviceNotificationsJob" job in the "KFS-PDP" jobstream
-   # And I run the "pdpExtractGITransactionsStepJob" job in the "KFS-PDP" jobstream
-   And I run the "pdpClearPendingTransactionsJob" job in the "KFS-PDP" jobstream
-   And I run the "payeeMasterExtractJob" job in the "KUALI-TAX" jobstream
-   And I run the "documentCreationJob" job in the "KFS-FP" jobstream
-   And I run the "checkReconciliationJob" job in the "KUALI-CR" jobstream
-  # And I run the "crGITransactionJob" job in the "KUALI-CR" jobstream
+    And I run the "pdpExtractAchPaymentsJob" job in the "KFS-PDP" jobstream
+    And I run the "pdpSendAchAdviceNotificationsJob" job in the "KFS-PDP" jobstream
+    And I run the "pdpExtractGlTransactionsStepJob" job in the "KFS-PDP" jobstream
+    And I run the "pdpClearPendingTransactionsJob" job in the "KFS-PDP" jobstream
+    And I run the "payeeMasterExtractJob" job in the "KUALI-TAX" jobstream
+    And I run the "documentCreationJob" job in the "KFS-FP" jobstream
+    And I run the "checkReconciliationJob" job in the "KUALI-CR" jobstream
+    And I run the "crGlTransactionJob" job in the "KUALI-CR" jobstream
     And I run the "checkReconciliationJob" job in the "KUALI-CR" jobstream
     And I run the "procurementCardHolderJob" job in the "KFS-FP" jobstream
     And I run the "procurementCardDocumentJob" job in the "KFS-FP" jobstream
     And I run the "electronicInvoiceExtractJob" job in the "KFS-PURAP" jobstream
     And I run the "eCustomsDailyJob" job in the "KFS-VND" jobstream
     And I run the "laborEncumbranceAdjustmentJob" job in the "KFS-LD" jobstream
-    And I run the "calculateEREjob" job in the "KFS-LD" jobstream
+    And I run the "calculateEreJob" job in the "KFS-LD" jobstream
     And I run the "laborNightlyOutJob" job in the "KFS-LD" jobstream
     And I run the "laborScrubberJob" job in the "KFS-LD" jobstream
     And I run the "laborPosterJob" job in the "KFS-LD" jobstream
     And I run the "laborBalancingJob" job in the "KFS-LD" jobstream
-    And I run the "ereSweepJob" job in the "KFS-LD" jobstream
+    # And I run the "ereSweepJob" job in the "KFS-LD" jobstream
     And I run the "laborScrubberJob" job in the "KFS-LD" jobstream
     And I run the "laborPosterJob" job in the "KFS-LD" jobstream
     And I run the "laborBalancingJob" job in the "KFS-LD" jobstream
