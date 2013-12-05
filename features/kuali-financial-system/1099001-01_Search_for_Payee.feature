@@ -6,7 +6,8 @@
 
   Background:
   	Given I am up top
-
+  	
+  @Day1 @1099001-01
   Scenario: Search for Payee
 
   Given I am on the "Central Admin" system tab
