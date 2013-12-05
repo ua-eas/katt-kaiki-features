@@ -7,6 +7,7 @@
   Background:
   	Given I am up top
 
+  @Day1 @PVEN002-01
   Scenario: Foreign PO Vendor
 
   Given I am on the "Main Menu" system tab
