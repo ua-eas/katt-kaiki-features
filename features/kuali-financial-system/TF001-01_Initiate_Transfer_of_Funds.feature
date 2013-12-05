@@ -32,4 +32,4 @@
   When I click "Show" on the "Route Log" tab
     And I click "Show" on the "Future Action Requests" tab
     And I should see "Requested Of" text set to "Fred FiscalOfficer"
-    And I click the "Submit" buttons
+    And I click the "Submit" button
