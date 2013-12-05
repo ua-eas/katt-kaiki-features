@@ -6,7 +6,8 @@
 
   Background:
   	Given I am up top
-
+  
+  @Day1 @CASH001-01
   Scenario: Open Cash Drawer and Cash Maintenance Document
 
   Given I am on the "Central Admin" system tab
