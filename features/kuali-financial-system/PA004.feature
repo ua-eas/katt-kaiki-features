@@ -379,13 +379,9 @@
     And I click "Hide" on the "Process Items" tab
 
 
-  When I click "Show" on the "Account Summary" tab
-    And I click the "refresh account summary" button
-    And I click "Hide" on the "Account Summary" tab
-
-
   When I click "Show" on the "1099 Classification" tab
-#    And I should see "Total" text set to "[Vendor Remit Amount]"
+    And I click the "refresh from account lines" button
+    And I should see "Total" text set to "[Vendor Remit Amount]"
     And I click the "save" button
     And I should see the message "Document was successfully saved."
     And I record this "document" number in the document header
@@ -468,13 +464,9 @@
     And I click "Hide" on the "Process Items" tab
 
 
-  When I click "Show" on the "Account Summary" tab
-    And I click the "refresh account summary" button
-    And I click "Hide" on the "Account Summary" tab
-
-
   When I click "Show" on the "1099 Classification" tab
-#    And I should see "Total" text set to "[Vendor Remit Amount]"
+    And I click the "refresh from account lines" button
+    And I should see "Total" text set to "[Vendor Remit Amount]"
     And I click the "save" button
     And I should see the message "Document was successfully saved."
     And I record this "document" number in the document header
@@ -557,13 +549,9 @@
     And I click "Hide" on the "Process Items" tab
 
 
-  When I click "Show" on the "Account Summary" tab
-    And I click the "refresh account summary" button
-    And I click "Hide" on the "Account Summary" tab
-
-
   When I click "Show" on the "1099 Classification" tab
-#    And I should see "Total" text set to "[Vendor Remit Amount]"
+    And I click the "refresh from account lines" button
+    And I should see "Total" text set to "[Vendor Remit Amount]"
     And I click the "save" button
     And I should see the message "Document was successfully saved."
     And I record this "document" number in the document header
@@ -646,13 +634,9 @@
     And I click "Hide" on the "Process Items" tab
 
 
-  When I click "Show" on the "Account Summary" tab
-    And I click the "refresh account summary" button
-    And I click "Hide" on the "Account Summary" tab
-
-
   When I click "Show" on the "1099 Classification" tab
-#    And I should see "Total" text set to "[Vendor Remit Amount]"
+    And I click the "refresh from account lines" button
+    And I should see "Total" text set to "[Vendor Remit Amount]"
     And I click the "save" button
     And I should see the message "Document was successfully saved."
     And I record this "document" number in the document header
@@ -728,13 +712,9 @@
     And I click "Hide" on the "Process Items" tab
 
 
-  When I click "Show" on the "Account Summary" tab
-    And I click the "refresh account summary" button
-    And I click "Hide" on the "Account Summary" tab
-
-
   When I click "Show" on the "1099 Classification" tab
-#    And I should see "Total" text set to "Grand Total:"
+    And I click the "refresh from account lines" button
+    And I should see "Total" text set to "Grand Total:"
     And I record this "document" number in the document header
     And I record this "vendor credit memo" number in the document header
     And I record this "vendor credit memo document" number in the document header
