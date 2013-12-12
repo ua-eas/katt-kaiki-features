@@ -328,7 +328,7 @@
   When I click the "Payment Request" link
     And I am in the "Payment Request Initiation" tab
     And I set "Purchase Order #" to "the recorded purchase order number"
-    And I set "Invoice Number" to "11223342"
+    And I set "Invoice Number" to "11223344"
     And I set "Invoice Date" to "Today's Date"
     And I set "Vendor Invoice Amount" to "100"
     And I click the "continue" button
@@ -347,7 +347,7 @@
 
 
   When I click "Show" on the "Invoice Info" tab
-    And I should see "Invoice Number" text set to "11223342"
+    And I should see "Invoice Number" text set to "11223344"
     And I should see "Invoice Date" text set to "Today's Date"
     And I should see "Purchase Order" text set to "the recorded purchase order number"
     And I set "Pay Date" to "Today's Date"
