@@ -328,7 +328,7 @@
   When I click the "Payment Request" link
     And I am in the "Payment Request Initiation" tab
     And I set "Purchase Order #" to "the recorded purchase order number"
-    And I set "Invoice Number" to "11223344"
+    And I set "Invoice Number" to "11223343"
     And I set "Invoice Date" to "Today's Date"
     And I set "Vendor Invoice Amount" to "100"
     And I click the "continue" button
