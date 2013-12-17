@@ -16,6 +16,7 @@
     And I am in the "Document Overview" tab
     And I set "Description" to "TEST Pre-Encumbrance"
     And I set "Explanation" to "TEST Pre-Encumbrance"
+    
   When I am in the "Accounting Lines" tab
     And I set "Chart" to "UA" in the "Encumbrance" subsection
     And I set "Account Number" to "1732100" in the "Encumbrance" subsection

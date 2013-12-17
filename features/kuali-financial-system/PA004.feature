@@ -26,7 +26,6 @@
   When I click the "Requisition" link
     And I click the "Collapse All" button
 
-
   When I click "Show" on the "Document Overview" tab
     And I am in the "Document Overview" section
     And I set "Description" to "PA-004"
@@ -38,7 +37,6 @@
   Then I should see "Chart/Org" text set to "UA  /  9507"
     And I should see "Funding Source" set to "INSTITUTION ACCOUNT"
   When I click "Hide" on the "Document Overview" tab
-
 
   When I click "Show" on the "Delivery" tab
     And I am in the "Final Delivery" section
@@ -64,7 +62,6 @@
     And I click the "Final Delivery Address" radio button
     And I click "Hide" on the "Delivery" tab
 
-
   When I click "Show" on the "Vendor" tab
     And I am in the "Vendor Address" section
     And I start a lookup for "Suggested Vendor"
@@ -74,7 +71,6 @@
     And I am in the "Additional Suggested Vendor Names" section
     And I set "Vendor Name 1" to "VWR International"
     And I click "Hide" on the "Vendor" tab
-
 
   Then I click "Show" on the "Items" tab
   When I am in the "Add Item" section
@@ -86,7 +82,6 @@
       | QUANTITY TAXABLE | 10       | BX                   | 553-BGG   | Ladybug Tap Shoes | 12.50     | Add    |
       | QUANTITY TAXABLE | 12       | EA                   | 311-RBT   | Robot Cufflinks   | 2.45      | Add    |
     And I am in the "Current Items" section
-    #And I click "Show" on the "Accounting Lines" section under "Current Items"  - THIS IS ALREADY SHOWING
     And I fill out the "Accounting Lines" table with:
       | Item # | Chart | Account Number | Object | Percent | Action |
       | Item 1 | UA    | 1732100        | 5230   | 100     | Add    |
@@ -98,12 +93,10 @@
     And I am in the "Additional Charges" section
     And I set "Description" to "Freight" in the "FREIGHT" subsection
     And I set "Extended Cost" to "10" in the "FREIGHT" subsection
-    #And I click "Show" on the "Accounting Lines" section under "FREIGHT" in the "Additional Charges" subsection - IS ALREADY OPEN
     And I fill out the "Accounting Lines" table in the "FREIGHT" subsection with:
       | Chart | Account Number | Object | Percent | Action |
       | UA    | 1732100        | 5560   | 100     | Add    |
     And I click "Hide" on the "Items" tab
-
 
   When I click "Show" on the "Additional Institutional Info" tab
     And I am in the "Additional" section
@@ -113,21 +106,16 @@
   When I set "Requestor Email" to "testID@fakeserver.edu"
     And I click "Hide" on the "Additional Institutional Info" tab
 
-
   When I click "Show" on the "Account Summary" tab
     And I am in the "Account Summary" section
     And I should not see the message "No Accounts"
-    #if we do not see account information, we need to click the refresh button
-    #And I click the "Refresh Account Summary" button
     And I click "Hide" on the "Account Summary" tab
-
 
   When I click "Show" on the "Notes and Attachments" tab
     And I am in the "Notes and Attachments" section
     And I set the "Note Text" to "Purchasing Supplies for annual Animal-Robot Summit"
     And I click "Add" on "Notes and Attachments"
     And I click "Hide" on the "Notes and Attachments" tab
-
 
   When I click "Show" on the "Items" tab
     And I am in the "Add Item" section
@@ -136,15 +124,11 @@
     And I click the "Submit" button
     And I should see the message "Document was successfully submitted."
 
-
   When I click "Show" on the "Route Log" tab
-    #click show on Pending Action requests if it is present
-    #And I click "Show" on the "Pending Action Requests" tab
     And I click "Show" on the "Future Action Requests" tab
     And I record this "Document" number in the document header
     And I record this "requisition" number in the document header
     And I click the "Close" button
-
 
   Given I am logged in as "kfs-test-sys10"
   When I click the "document search" button
@@ -173,7 +157,6 @@
     And I am in the "Document Overview" tab
     And I should see "Description" set to "Contract Manager Assigned"
 
-
   When I am in the "Assign A Contract Manager" tab
     And I should see a table row with a Requisition Number of "the recorded requisition number"
   When I start a lookup for "Contract Manager"
@@ -183,7 +166,6 @@
   Then I click the "Submit" button
     And I should see the message "Document was successfully submitted."
     And I click the "Reload" button
-
 
   When I click "Show" on the "Route Log" tab
     And I should see "Status" text set to "FINAL"
@@ -206,8 +188,7 @@
     And I select the first document on the search page
   Then a new browser window appears
     And I click the "Collapse All" button
-
-
+    
   When I click "Show" on the "Document Overview" tab
     And I am in the "Document Overview" section
     And I should see "Description" set to "PA-004"
@@ -220,7 +201,6 @@
     And I should see the "Payment Request Positive Approval Required" checkbox is "unchecked"
     And I should see "Requisition Source" text set to "DIRECT INPUT"
     And I click "Hide" on the "Document Overview" tab
-
 
   When I click "Show" on the "Delivery" tab
     And I am in the "Final Delivery" section
@@ -239,14 +219,12 @@
     And I should see "Shipping Address Presented to Vendor (use Receiving Address?)" radio button set to "Final Delivery Address"
     And I click "Hide" on the "Delivery" tab
 
-
   When I click "Show" on the "Vendor" tab
     And I am in the "Vendor Address" section
     And I should see "Vendor #" text set to "18360-0"
     And I am in the "Vendor Info" section
     And I set "Vendor Choice" to "Contracted Price"
     And I click "Hide" on the "Vendor" tab
-
 
   When I click "Show" on the "Stipulations" tab
     And I am in the "Vendor Stipulations and Information" section
@@ -258,7 +236,6 @@
     And I set "Note Text" to "Rush Order"
     And I click the "Add" button
     And I click "Hide" on the "Stipulations" tab
-
 
   When I click "Show" on the "Items" tab
     And I am in the "Current Items" section
@@ -272,7 +249,6 @@
     And I click "Show" on the "Accounting Lines" subsection
     And I click "Hide" on the "Items" tab
 
-
   When I click "Show" on the "Additional Institutional Info" tab
     And I am in the "Additional" section
   Then I should see "Method of PO Transmission" set to "PRINT"
@@ -282,12 +258,10 @@
     And I should see "Requestor Email" set to "testID@fakeserver.edu"
     And I click "Hide" on the "Additional Institutional Info" tab
 
-
   When I click "Show" on the "Notes and Attachments" tab
     And I set "Note Text" to "Order for Dr. Jones"
     And I click the "Add" on "Notes and Attachments"
     And I click "Hide" on the "Notes and Attachments" tab
-
 
   When I click "Show" on the "Ad Hoc Recipients" tab
     And I set "Action Requested" to "FYI" in the "Person Requests" subsection
@@ -298,7 +272,6 @@
     And I click the "Add" button in the "Person Requests" subsection
     And I click "Hide" on the "Ad Hoc Recipients" tab
 
-
   Then I click the "calculate" button
     And I click the "Submit" button
     And I click the "Reload" button
@@ -306,12 +279,16 @@
     And I click the "Print" button
     And a new browser window appears
   When I slow down by a lot
-  #PDF should open, it is reviewed and then print the PDF
+  # PDF should open, it is reviewed and then print the PDF
   Then I switch to the 2nd browser window
   When I am fast
 
   When I click "Show" on the "Route Log" tab
     And I should see "Status" text set to "FINAL"
+
+    And I am in the "Document Overview" tab
+    And I am in the "Financial Document Detail" section
+    And I record the "Year" amount
     And I record this "Purchase Order" number in the document header
     And I record this "Purchase Order Document" number in the document header
   Then I click the "Close" button
@@ -332,19 +309,17 @@
     And I set "Invoice Date" to "Today's Date"
     And I set "Vendor Invoice Amount" to "100"
     And I click the "continue" button
-
+    # And I click the "Yes" button
 
   When I am in the "Document Overview" tab
     And I am in the "Payment Request Detail" section
     And I should see "Use Tax Indicator" text set to "No"
     And I click the "Collapse All" button
 
-
   When I click "Show" on the "Vendor" tab
     And I am in the "Vendor Address" section
     And I should see "Vendor #" text set to "18360-0"
     And I click "Hide" on the "Vendor" tab
-
 
   When I click "Show" on the "Invoice Info" tab
     And I should see "Invoice Number" text set to "11223344"
@@ -354,7 +329,6 @@
     And I should see the "Immediate Pay" checkbox is "unchecked"
     And I set "Payment Method Code" to "C - AP Credit Card"
     And I click "Hide" on the "Invoice Info" tab
-
 
   When I click "Show" on the "Process Items" tab
     And I am in the "Items" section
@@ -378,7 +352,6 @@
     And I record the "[Vendor Remit Amount]" amount
     And I click "Hide" on the "Process Items" tab
 
-
   When I click "Show" on the "1099 Classification" tab
     And I click the "refresh from account lines" button
     And I should see "Total" text set to "[Vendor Remit Amount]"
@@ -387,7 +360,6 @@
     And I record this "document" number in the document header
   Then I click the "Submit" button
     And I click the "yes" button
-
 
   Given I am logged in as "kfs-test-sys10"
     And I am on the "Main Menu" system tab
@@ -418,18 +390,15 @@
     And I click the "continue" button
     And I click the "Yes" button
 
-
   When I am in the "Document Overview" tab
     And I am in the "Payment Request Detail" section
     And I should see "Use Tax Indicator" text set to "No"
     And I click the "Collapse All" button
 
-
   When I click "Show" on the "Vendor" tab
     And I am in the "Vendor Address" section
     And I should see "Vendor #" text set to "18360-0"
     And I click "Hide" on the "Vendor" tab
-
 
   When I click "Show" on the "Invoice Info" tab
     And I should see "Invoice Number" text set to "11223345"
@@ -439,7 +408,6 @@
     And I should see the "Immediate Pay" checkbox is "unchecked"
     And I set "Payment Method Code" to "W - Wire Transfer"
     And I click "Hide" on the "Invoice Info" tab
-
 
   When I click "Show" on the "Process Items" tab
     And I am in the "Items" section
@@ -463,7 +431,6 @@
     And I record the "[Vendor Remit Amount]" amount
     And I click "Hide" on the "Process Items" tab
 
-
   When I click "Show" on the "1099 Classification" tab
     And I click the "refresh from account lines" button
     And I should see "Total" text set to "[Vendor Remit Amount]"
@@ -472,7 +439,6 @@
     And I record this "document" number in the document header
   Then I click the "Submit" button
     And I click the "yes" button
-
 
   Given I am logged in as "kfs-test-sys10"
     And I am on the "Main Menu" system tab
@@ -503,18 +469,15 @@
     And I click the "continue" button
     And I click the "Yes" button
 
-
   When I am in the "Document Overview" tab
     And I am in the "Payment Request Detail" section
     And I should see "Use Tax Indicator" text set to "No"
     And I click the "Collapse All" button
 
-
   When I click "Show" on the "Vendor" tab
     And I am in the "Vendor Address" section
     And I should see "Vendor #" text set to "18360-0"
     And I click "Hide" on the "Vendor" tab
-
 
   When I click "Show" on the "Invoice Info" tab
     And I should see "Invoice Number" text set to "11223347"
@@ -524,7 +487,6 @@
     And I should see the "Immediate Pay" checkbox is "unchecked"
     And I set "Payment Method Code" to "M - AP USE ONLY"
     And I click "Hide" on the "Invoice Info" tab
-
 
   When I click "Show" on the "Process Items" tab
     And I am in the "Items" section
@@ -548,7 +510,6 @@
     And I record the "[Vendor Remit Amount]" amount
     And I click "Hide" on the "Process Items" tab
 
-
   When I click "Show" on the "1099 Classification" tab
     And I click the "refresh from account lines" button
     And I should see "Total" text set to "[Vendor Remit Amount]"
@@ -557,7 +518,6 @@
     And I record this "document" number in the document header
   Then I click the "Submit" button
     And I click the "yes" button
-
 
   Given I am logged in as "kfs-test-sys10"
     And I am on the "Main Menu" system tab
@@ -588,18 +548,15 @@
     And I click the "continue" button
     And I click the "Yes" button
 
-
   When I am in the "Document Overview" tab
     And I am in the "Payment Request Detail" section
     And I should see "Use Tax Indicator" text set to "No"
     And I click the "Collapse All" button
 
-
   When I click "Show" on the "Vendor" tab
     And I am in the "Vendor Address" section
     And I should see "Vendor #" text set to "18360-0"
     And I click "Hide" on the "Vendor" tab
-
 
   When I click "Show" on the "Invoice Info" tab
     And I should see "Invoice Number" text set to "11223348"
@@ -609,7 +566,6 @@
     And I check the "Immediate Pay" checkbox
     And I set "Payment Method Code" to "A - ACH/Check"
     And I click "Hide" on the "Invoice Info" tab
-
 
   When I click "Show" on the "Process Items" tab
     And I am in the "Items" section
@@ -633,7 +589,6 @@
     And I record the "[Vendor Remit Amount]" amount
     And I click "Hide" on the "Process Items" tab
 
-
   When I click "Show" on the "1099 Classification" tab
     And I click the "refresh from account lines" button
     And I should see "Total" text set to "[Vendor Remit Amount]"
@@ -644,7 +599,6 @@
     And I record this "payment request document" number in the document header
   Then I click the "Submit" button
     And I click the "yes" button
-
 
   Given I am logged in as "kfs-test-sys10"
     And I am on the "Main Menu" system tab
@@ -663,40 +617,39 @@
     And I should see "Payment Request Status" text set to "Department-Approved" in the document header
   When I close all extra browser windows
 
+
+
   @Day1 @PA004-06
   Scenario: Create credit memo
-
+  
   Given I am on the "Central Admin" system tab
     And I am logged in as "kfs-test-sec36"
   When I click the "Vendor Credit Memo" link
     And I am in the "Credit Memo Initiation" tab
     And I set "Credit Memo # from Vendor" to "55443322"
-  # #PREQ recorded number from the A - ACH/Check payment method
+    # PREQ recorded number from the A - ACH/Check payment method
     And I set "Payment Request #" to "the recorded payment request number"
     And I set "Credit Memo Date" to "Today's Date"
     And I set "Vendor Credit Memo Amount" to "10"
     And I click the "Continue" button
+    # And I click the "Yes" button
     And I should see "Status" text set to "SAVED" in the document header
     And I should see "Credit Memo Status" text set to "In Process" in the document header
     And I click the "Collapse All" button
-
-
+  
   When I click "Show" on the "Document Overview" tab
     And I set "Explanation" to "PA1004"
     And I click "Hide" on the "Document Overview" tab
-
-
+  
   When I click "Show" on the "Vendor" tab
     And I am in the "Vendor Address" section
     And I should see "Vendor #" text set to "18360-0"
     And I click "Hide" on the "Vendor" tab
-
-
+  
   When I click "Show" on the "Credit Memo Info" tab
     And I should see "Payment Method Code" set to "A - ACH/Check"
     And I click "Hide" on the "Credit Memo Info" tab
-
-
+  
   When I click "Show" on the "Process Items" tab
     And I am in the "Items" section
     And I fill out the "Items" table with:
@@ -710,21 +663,18 @@
     And I am in the "Additional Charges" section
     And I record the "Grand Total:" amount
     And I click "Hide" on the "Process Items" tab
-
-
+  
   When I click "Show" on the "1099 Classification" tab
     And I click the "refresh from account lines" button
     And I should see "Total" text set to "Grand Total:"
     And I record this "document" number in the document header
     And I record this "vendor credit memo" number in the document header
     And I record this "vendor credit memo document" number in the document header
-
-
+  
   When I click "Show" on the "Route Log" tab
     And I click the "submit" button
     And I click the "yes" button
-
-
+  
   Given I am on the "Main Menu" system tab
   When I click the "document search" button
     And I set "Document/Notification Id" to "the recorded document number" on the search page
