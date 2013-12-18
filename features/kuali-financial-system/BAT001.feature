@@ -30,36 +30,36 @@
    
  When I verify that an ".xml" file starting with "pdp_check" exists in "staging/pdp/paymentExtract" of the KFS working directory
 
-   And I run the "pdpExtractAchPaymentsJob" job in the "KFS-PDP" jobstream
-   And I run the "pdpSendAchAdviceNotificationsJob" job in the "KFS-PDP" jobstream
-   And I run the "pdpExtractGlTransactionsStepJob" job in the "KFS-PDP" jobstream
-   And I run the "pdpClearPendingTransactionsJob" job in the "KFS-PDP" jobstream
-   # And I run the "payeeMasterExtractJob" job in the "KUALI-TAX" jobstream
-   And I run the "documentCreationJob" job in the "KFS-FP" jobstream
-   And I run the "checkReconciliationJob" job in the "KUALI-CR" jobstream
-   And I run the "crGlTransactionJob" job in the "KUALI-CR" jobstream
-   And I run the "checkReconciliationJob" job in the "KUALI-CR" jobstream
-   # And I run the "procurementCardHolderJob" job in the "KFS-FP" jobstream
-   # And I run the "procurementCardDocumentJob" job in the "KFS-FP" jobstream
-   # And I run the "electronicInvoiceExtractJob" job in the "KFS-PURAP" jobstream
-   # And I run the "eCustomsDailyJob" job in the "KFS-VND" jobstream
-   # And I run the "laborEncumbranceAdjustmentJob" job in the "KFS-LD" jobstream
-   # And I run the "calculateEreJob" job in the "KFS-LD" jobstream
-   # And I run the "laborNightlyOutJob" job in the "KFS-LD" jobstream
-   # And I run the "laborScrubberJob" job in the "KFS-LD" jobstream
-   # And I run the "laborPosterJob" job in the "KFS-LD" jobstream
-   # And I run the "laborBalancingJob" job in the "KFS-LD" jobstream
-   # And I run the "ereSweepJob" job in the "KFS-LD" jobstream
-   # And I run the "laborScrubberJob" job in the "KFS-LD" jobstream
-   # And I run the "laborPosterJob" job in the "KFS-LD" jobstream
-   # And I run the "laborBalancingJob" job in the "KFS-LD" jobstream
-   # And I run the "laborFeedJob" job in the "KFS-LD" jobstream
-   # And I run the "clearLaborPendingEntriesJob" job in the "KFS-LD" jobstream
-   And I run the "nightlyOutJob" job in the "KFS-GL" jobstream
-   # And I run the "enterpriseFeedJob" job in the "KFS-GL" jobstream
-   # And I run the "collectorJob" job in the "KFS-GL" jobstream
-   And I run the "scrubberJob" job in the "KFS-GL" jobstream
-   And I run the "posterJob" job in the "KFS-GL" jobstream
-   And I run the "posterBalancingJob" job in the "KFS-GL" jobstream
-   And I run the "clearPendingEntriesJob" job in the "KFS-GL" jobstream
-   # And I run the "cabExtractJob" job in the "KFS-CAB" jobstream
+    And I run the "pdpExtractAchPaymentsJob" job in the "KFS-PDP" jobstream
+    And I run the "pdpSendAchAdviceNotificationsJob" job in the "KFS-PDP" jobstream
+    And I run the "pdpExtractGlTransactionsStepJob" job in the "KFS-PDP" jobstream
+    And I run the "pdpClearPendingTransactionsJob" job in the "KFS-PDP" jobstream
+    And I run the "payeeMasterExtractJob" job in the "KUALI-TAX" jobstream
+    And I run the "documentCreationJob" job in the "KFS-FP" jobstream
+    And I run the "checkReconciliationJob" job in the "KUALI-CR" jobstream
+    And I run the "crGlTransactionJob" job in the "KUALI-CR" jobstream
+    And I run the "checkReconciliationJob" job in the "KUALI-CR" jobstream
+    And I run the "procurementCardHolderJob" job in the "KFS-FP" jobstream
+    And I run the "procurementCardDocumentJob" job in the "KFS-FP" jobstream
+    And I run the "electronicInvoiceExtractJob" job in the "KFS-PURAP" jobstream
+    And I run the "eCustomsDailyJob" job in the "KFS-VND" jobstream
+    And I run the "laborEncumbranceAdjustmentJob" job in the "KFS-LD" jobstream
+    And I run the "calculateEreJob" job in the "KFS-LD" jobstream
+    And I run the "laborNightlyOutJob" job in the "KFS-LD" jobstream
+    And I run the "laborScrubberJob" job in the "KFS-LD" jobstream
+    And I run the "laborPosterJob" job in the "KFS-LD" jobstream
+    And I run the "laborBalancingJob" job in the "KFS-LD" jobstream
+    And I run the "ereSweepJob" job in the "KFS-LD" jobstream
+    And I run the "laborScrubberJob" job in the "KFS-LD" jobstream
+    And I run the "laborPosterJob" job in the "KFS-LD" jobstream
+    And I run the "laborBalancingJob" job in the "KFS-LD" jobstream
+    And I run the "laborFeedJob" job in the "KFS-LD" jobstream
+    And I run the "clearLaborPendingEntriesJob" job in the "KFS-LD" jobstream
+    And I run the "nightlyOutJob" job in the "KFS-GL" jobstream
+    And I run the "enterpriseFeedJob" job in the "KFS-GL" jobstream
+    And I run the "collectorJob" job in the "KFS-GL" jobstream
+    And I run the "scrubberJob" job in the "KFS-GL" jobstream
+    And I run the "posterJob" job in the "KFS-GL" jobstream
+    And I run the "posterBalancingJob" job in the "KFS-GL" jobstream
+    And I run the "clearPendingEntriesJob" job in the "KFS-GL" jobstream
+    And I run the "cabExtractJob" job in the "KFS-CAB" jobstream
