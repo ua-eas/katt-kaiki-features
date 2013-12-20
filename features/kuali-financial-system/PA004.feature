@@ -14,6 +14,8 @@
             in PA004-05.
             This test assumes PA004-01, PA004-02, PA004-0304 and
             PA004-05 have been previously run.
+    07    - Verify GL on PREQ with Sales Tax for all the different
+            payment methods
 
   Background:
   	Given I am up top
@@ -188,7 +190,7 @@
     And I select the first document on the search page
   Then a new browser window appears
     And I click the "Collapse All" button
-    
+
   When I click "Show" on the "Document Overview" tab
     And I am in the "Document Overview" section
     And I should see "Description" set to "PA-004"
@@ -621,7 +623,7 @@
 
   @Day1 @PA004-06
   Scenario: Create credit memo
-  
+
   Given I am on the "Central Admin" system tab
     And I am logged in as "kfs-test-sec36"
   When I click the "Vendor Credit Memo" link
@@ -636,20 +638,20 @@
     And I should see "Status" text set to "SAVED" in the document header
     And I should see "Credit Memo Status" text set to "In Process" in the document header
     And I click the "Collapse All" button
-  
+
   When I click "Show" on the "Document Overview" tab
     And I set "Explanation" to "PA1004"
     And I click "Hide" on the "Document Overview" tab
-  
+
   When I click "Show" on the "Vendor" tab
     And I am in the "Vendor Address" section
     And I should see "Vendor #" text set to "18360-0"
     And I click "Hide" on the "Vendor" tab
-  
+
   When I click "Show" on the "Credit Memo Info" tab
     And I should see "Payment Method Code" set to "A - ACH/Check"
     And I click "Hide" on the "Credit Memo Info" tab
-  
+
   When I click "Show" on the "Process Items" tab
     And I am in the "Items" section
     And I fill out the "Items" table with:
@@ -663,18 +665,18 @@
     And I am in the "Additional Charges" section
     And I record the "Grand Total:" amount
     And I click "Hide" on the "Process Items" tab
-  
+
   When I click "Show" on the "1099 Classification" tab
     And I click the "refresh from account lines" button
     And I should see "Total" text set to "Grand Total:"
     And I record this "document" number in the document header
     And I record this "vendor credit memo" number in the document header
     And I record this "vendor credit memo document" number in the document header
-  
+
   When I click "Show" on the "Route Log" tab
     And I click the "submit" button
     And I click the "yes" button
-  
+
   Given I am on the "Main Menu" system tab
   When I click the "document search" button
     And I set "Document/Notification Id" to "the recorded document number" on the search page
@@ -705,7 +707,7 @@
       | Balance Type Code | Object Type Code | Debit Credit Code |
       |       EX          |        EX        |         D         |
       |       EX          |        FB        |         C         |
-    
+
   Given I am on the "Main Menu" system tab
   When I click the "General Ledger Entry" link
     And I should see "Fiscal Year" set to the current fiscal year on the search page
@@ -722,7 +724,7 @@
       |       EX          |        FB        |         D         |
       |       EX          |        EX        |         C         |
       |       AC          |        LI        |         C         |
-   
+
   Given I am on the "Main Menu" system tab
   When I click the "General Ledger Entry" link
     And I should see "Fiscal Year" set to the current fiscal year on the search page
