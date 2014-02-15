@@ -62,11 +62,13 @@ Feature: Award administrative amendment
     And I am fast
     And I set "Sponsor Award ID" to "R01AG012345" in the "Sponsor" subsection
     And I set "Modification ID" to "03" in the "Sponsor" subsection
+#This was in the old dev branch, not in the EC branch. Not sure if it was left out on purpose or not:--->And I slow down
     And I click "Save" button
   Then I should see the message "Document was successfully saved."
 
 
   When I am on the "Award Actions" document tab
+    And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   Then I should see the message "No Validation Errors present."

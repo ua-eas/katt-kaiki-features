@@ -74,6 +74,7 @@ Feature: Award No Cost Extension creation and submission
     And I set "End Date" in row "5" to "06/11/2019" under the "Direct/F&A Funds Distribution" table
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
+    And I am fast
   When I click the "Submit" button
     And I wait for the document to finish being processed
     And I am fast

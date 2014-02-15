@@ -70,20 +70,20 @@ Feature: Award supplement/continuation creation and submission
     And I should see the message "Warning exists in Direct/F&A Funds Distribution section."
   When I click "Show" on the "Direct/F&A Funds Distribution" tab
     And I fill out the "Direct/F&A Funds Distribution" table with:
-        |  #     | Direct Cost | F&A Cost |
-        |  1     | 66000.00    | 34000.00 |
-        |  2     | 116000.00   | 34000.00 |
-        |  3     | 66000.00    | 34000.00 |
-        |  4     | 66000.00    | 34000.00 |
-        |  5     | 66000.00    | 34000.00 |
+      |  #     | Direct Cost | F&A Cost |
+      |  1     | 66000.00    | 34000.00 |
+      |  2     | 116000.00   | 34000.00 |
+      |  3     | 66000.00    | 34000.00 |
+      |  4     | 66000.00    | 34000.00 |
+      |  5     | 66000.00    | 34000.00 |
     And I click the "Recalculate" button
   Then I should see the "Direct/F&A Funds Distribution" table filled out with:
-        |  #     | Direct Cost | F&A Cost  |
-        |  1     | 66,000.00   | 34,000.00 |
-        |  2     | 116,000.00  | 34,000.00 |
-        |  3     | 66,000.00   | 34,000.00 |
-        |  4     | 66,000.00   | 34,000.00 |
-        |  5     | 66,000.00   | 34,000.00 |
+    |  #     | Direct Cost | F&A Cost  |
+    |  1     | 66,000.00   | 34,000.00 |
+    |  2     | 116,000.00  | 34,000.00 |
+    |  3     | 66,000.00   | 34,000.00 |
+    |  4     | 66,000.00   | 34,000.00 |
+    |  5     | 66,000.00   | 34,000.00 |
       And I should see Total calculated as:
         |Direct Cost      | $380,000.00 |
         |F&A Cost         | $170,000.00 |
@@ -135,6 +135,7 @@ Feature: Award supplement/continuation creation and submission
 
 
   When I am on the "Award Actions" document tab
+    And I am fast
     And I click "Show" on the "Data Validation" tab
     And I click the "turn on validation" button
   When I am in the "Validation Errors" section

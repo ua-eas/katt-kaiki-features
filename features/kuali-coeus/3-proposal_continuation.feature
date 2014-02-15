@@ -196,6 +196,7 @@ Feature: Continuation proposal creation and submission
   Then I should see the "Budget Periods" table filled out with:
     |  #     | Total Sponsor Cost | Direct Cost | F&A Cost  |
     |  1     | 100,000.00         | 66,000.00   | 34,000.00 |
+
     And I should see Totals calculated as:
       | Period Start Date  | 02/01/2015 |
       | Period End Date    | 01/31/2016 |

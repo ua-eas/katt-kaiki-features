@@ -118,7 +118,7 @@ Feature: Revision proposal creation and submission
     And I fill out the Combined Credit Split for "0721 - Cancer Center Division" under "Michael D Lukach" with the following:
       | Credit for Award | 100 |
       | F&A Revenue      | 100 |
-      And I slow down
+    And I slow down
     And I click the "Save" button
   Then I should see the message "Document was successfully saved."
 
@@ -276,6 +276,7 @@ Feature: Revision proposal creation and submission
     And I slow down
     And I click the "Save" button
     And I should see the message "Document was successfully saved."
+  When I click the "Return to Proposal" button
 
 
   When I click the "Return to Proposal" button
