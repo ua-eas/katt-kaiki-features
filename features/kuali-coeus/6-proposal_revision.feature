@@ -148,8 +148,8 @@ Feature: Revision proposal creation and submission
     And I answer the questions under "Does the Proposed Work Include any of the Following?" with:
       |  #     | Answer | Review Date | Explanation |
       |  1     | No     |             |             |
-      |  2     | No     |             |             |
-      |  3     | Yes    |             |             |
+      |  2     | Yes    |             |             |
+      |  3     | No     |             |             |
       |  4     | No     |             |             |
       |  5     | No     |             |             |
       |  6     | No     |             |             |
@@ -157,14 +157,11 @@ Feature: Revision proposal creation and submission
       |  8     | No     |             |             |
       |  9     | No     |             |             |
       | 10     | No     |             |             |
-      | 11     | No     |             |             |
-      | 12     | Yes    |             |             |
+      | 11     | Yes    |             |             |
+      | 12     | No     |             |             |
       | 13     | No     |             |             |
       | 14     | No     |             |             |
       | 15     | No     |             |             |
-      | 16     | No     |             |             |
-      | 17     | No     |             |             |
-      | 18     | No     |             |             |
     And I click "Hide" on the "Does the Proposed Work Include any of the Following?" tab
     And I click "Show" on the "F&A (Indirect Cost) Questions" tab
     And I answer the questions under "F&A (Indirect Cost) Questions" with:
