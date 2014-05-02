@@ -115,7 +115,7 @@ Feature: Resubmission proposal creation and submission
   When I am on the "Questions" document tab
     And I am fast
     And I click "Show" on the "Does the Proposed Work Include any of the Following?" tab
-    And I should see the questions under "Does the Proposed Work Include any of the Following?" with:
+    And I answer the questions under "Does the Proposed Work Include any of the Following?" with:
       | #      | Answer |
       |  1     | No     |
       |  2     | Yes    |
