@@ -250,9 +250,9 @@ Feature: Revision proposal creation and submission
   Then I should see Budget Totals calculated as:
     | Period Start Date  | 02/01/2015 |
     | Period End Date    | 01/31/2016 |
-    | Total Sponsor Cost |  25,000.00 |
+    | Total Sponsor Cost |  25,064.72 |
     | Direct Cost        |  22,425.00 |
-    | F&A Cost           |   2,575.00 |
+    | F&A Cost           |   2,639.72 |
     | Unrecovered F&A    |       0.00 |
     | Cost Sharing       |       0.00 |
     And I check the "Final?" checkbox
