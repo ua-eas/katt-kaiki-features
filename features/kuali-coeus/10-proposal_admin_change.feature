@@ -61,13 +61,7 @@ Feature: Administrative change proposal creation and submission
     And I click the "Search" button
     And I return the record with "KcPerson Id" of "112921864636"
     And I set "Proposal Role" to "Co-Investigator"
-    And I click the "Add Person" button
-    And I start a lookup for "Employee"
-    And I set "Last Name" to "Bookman"
-    And I click the "Search" button
-    And I return the record with "KcPerson Id" of "108643996300"
-    And I set "Proposal Role" to "Co-Investigator"
-    And I click the "Add Person" button
+    And I click the "Add Person" button    
     And I click "Show" on the "Michael P Lance" tab
     And I click "Show" on the "Person Details" section under "Michael P Lance"
     And I set "Percentage Effort" under "Michael P Lance" as "10"
@@ -76,10 +70,6 @@ Feature: Administrative change proposal creation and submission
     And I click "Show" on the "Person Details" section under "David S Alberts"
     And I set "Percentage Effort" under "David S Alberts" as "9"
     And I click "Hide" on the "David S Alberts" tab
-    And I click "Show" on the "Michael A Bookman" tab
-    And I click "Show" on the "Person Details" section under "Michael A Bookman"
-    And I set "Percentage Effort" under "Michael A Bookman" as "8"
-    And I click "Hide" on the "Michael A Bookman" tab
     And I click "Show" on the "Linda L Garland" tab
     And I click "Show" on the "Person Details" section under "Linda L Garland"
     And I set "Percentage Effort" under "Linda L Garland" as "7"
@@ -96,14 +86,8 @@ Feature: Administrative change proposal creation and submission
     And I fill out the Combined Credit Split for "0721 - Cancer Center Division" under "David S Alberts" with the following:
       | Credit for Award | 100 |
       | F&A Revenue      | 100 |
-    And I fill out the Combined Credit Split for "Michael A Bookman" with the following:
-      | Credit for Award | 5  |
-      | F&A Revenue      | 0  |
-    And I fill out the Combined Credit Split for "0721 - Cancer Center Division" under "Michael A Bookman" with the following:
-      | Credit for Award | 100 |
-      | F&A Revenue      | 100 |
     And I fill out the Combined Credit Split for "Linda L Garland" with the following:
-      | Credit for Award | 5 |
+      | Credit for Award | 10 |
       | F&A Revenue      | 0 |
     And I fill out the Combined Credit Split for "0721 - Cancer Center Division" under "Linda L Garland" with the following:
       | Credit for Award | 100 |
